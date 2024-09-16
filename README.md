@@ -12,27 +12,27 @@ En este repositorio se documentara todos los avaces del proyecto de unidad de la
  ![Organigrama](img/arbol2.png)
 
  ![Funciones](img/tabla1.png)
- 
- ## Estructura de Etapas para el Desarrollo del Proyecto
 
- ![Funciones](img/Responsabilidad.png)
-
-## Objetivos Generales y Específicos
+## Objetivo General
 
 <div style="text-align: justify">
 
-Los servicios de hoy se han adaptado a la mejora constante de los recursos digitales, sin embargo, hay algunos modelos de negocios que se reúsan al cambio de dirección y coordinación de la modularidad de sus servicios, es por ello que el cambio podría afectar el modelo para mejorar su capacidad de organización, y es claro el enfoque a la modernidad puede pesar un poco de dependiendo a la capacidad de aprender de los sectores. El área medica no es la excepción, desde muchos años el sector salud ha tenido muy poco desarrollo y actualización en sus procesos de atención y esto es por las siguientes causas:
+Desarrollar una aplicacion web movil que permita mejorar el rendimiento de la capacidad funcional de las solicitudes que se ingresan en la aprobacion de procedimientos clinicos, permitiendo la disponibilidad actulizar dichas solicitudes en tiempo real y directa para las areas correspondientes que operan dentro dentro de las instalaciones Hospitalarias del Hospital PrivilegeCare.
 
-La mayoría de los servicios que se prestan en un hospital deben de ser atendidos de manera inmediata sin retraso, ya que los servicios que se brindan dependen de la óptima atención de los detalles para resolver los casos médicos.
-El uso de la tecnología en la rama medica ha dado brincos altos, pero solo en las áreas de aplicación y procedimientos, no en la gestión de como debe de llevar su manera de trabajo. 
+</div>
 
-Los servicios que en la actualidad están disponibles se han implementado en el sector privado y público, son demasiado caros para adquirirlos y mas aun llevar un control en su mantenimiento, sin embargo, se podría solventar el flujo de información que se genera en un hospital para acelerar el proceso de automatización y análisis oportuno de la documentación generada por cada paciente, área, procedimientos, tratamiento e historial clínico más detallado, disponible en todo momento con una actualización con la documentación mas reciente de los procedimientos médicos realizados de cada uno de los pacientes, así como el control de la medicación, intervenciones quirúrgicas y tratamientos, así como un historial mas detallado desde la niñes hasta la adultes.  
+## Objetivo Especifico
 
-El trabajo seria manejar la información disponible generada en un hospital para optimizar mejor las áreas que lo requieran, así se agilizarían mejor los procesos administrativos que pueden afectar la atención oportuna de los pacientes, así como la mejora de la calidad de salud de estos. Tanto el personal de atención médica (médicos generales, enfermeras, especialistas, químicos, técnicos, ingenieros, licenciados legales, psicólogos, personal auxiliar y voluntarios), estarían involucrados directamente en la dinámica de la administración oportuna del hospital.
+<div style="text-align: justify">
 
-Desarrollar un sitio web para el área medica con capacidad de generar registros de todas las áreas y departamentos involucrados en la gestión y organización, permitiendo generar datos precisos y contundentes para un control de calidad en los procesos de generación de los datos de pacientes, personal médico, proveedores de servicios externos, insumos médicos y correcto manejo en el flujo de personal a las áreas de mayor demanda, es así que con las herramientas tecnológicas a utilizar en el desarrollo como lo son Django como frameword de desarrollo para la API, MySQL para el control de la base de datos y React para el desarrollo Frontend generaran un concepto que permitirá maquetar la estructura básica del diseño para la generación de la información y el consumo de la información. 
+1.- Permitir a los especilistas de las areas de Trasplantes de Organos enviar las correspondientes solicitudes para la evaluacion de las solicitudes por el area de Direccion General.
+2.- Asignar respuesta oportuna en las solicitudes de manera inmedienta a la area correspondiente de solicitud.
+3.- Acelerar el flujo de solicitudes de acuerdo a la demanda esperada, evitando colas de botella en el proceso.
+4.- Crear una recopilacion de datos que permitan el pos analisis en la respuesta, previniendo conflictos futuros y mejoras en la gestion del sistema
+5.- Dar garantia que todas las solitudes tengan una respuesta inmediata en un tiempo de respuesta no prolongado, esto dara beneficio a las gestiones que se impten en la aplicacion de los sevicios medios a los derecho habientes.
+7.- Mejorar el control de personal que realiza las solicitudes, esto pemitira que cada procedimiento esto supervisado por un personal de salut que sea eficiente en la intevncion de cada procedimiento.
 
-Los equipos en conjunto se encargarán de desarrollar áreas especificas del proyecto divididos en 7 sectores o departamentos, la información de la organización esta pensada para que cada sector pueda conectarse de manera precisa para responder a las necesidades del hospital, sin embargo, existen áreas especificas en donde la interacción puede ser limitada o nula de acuerdo a las acciones determinadas y solicitadas de los departamentos. 
+
 </div>
 
 
