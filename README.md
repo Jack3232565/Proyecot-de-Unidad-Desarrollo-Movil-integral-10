@@ -3,7 +3,7 @@ En este repositorio se documentara todos los avaces del proyecto de unidad de la
 
 # Jaguar Corporation 
 
-| ![Jaguar Corporation](img/LogosJaguarHospital.png)|
+| ![Jaguar Corporation](img/Logo%20Jaguar%20y%20Hospital.png)|
 | -------------------------- |
 | Logos |
 
