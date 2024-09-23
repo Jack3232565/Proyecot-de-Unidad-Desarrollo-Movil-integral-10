@@ -43,7 +43,7 @@ Desarrollar una aplicación móvil que permita optimizar la gestión y supervisi
 
 ## Proposito
 
-El objetovo de este proyecto es mejorar el tiempo de respuesta solicitudes al area de Direccion del Hospital PrivilegeCare, estrableciendo un control por el area de Direccion General, proporcionado una validacion en respuesta al grado de solictitud clinica dando relevancia a asintos que pongan en riesgo la salud de los pacientes y evitando que existan problemas en la gestion del hospital. Con esto se espera que el Hospital sea de alto rendimeinto y eficiencia en las operaciones clinicas.
+El propósito de este proyecto es optimizar el tiempo de respuesta a las solicitudes dirigidas al área de Dirección del Hospital PrivilegeCare, mediante el desarrollo de una aplicación móvil que permita una gestión más eficiente y fluida. La app ofrecerá una experiencia de usuario intuitiva y accesible, facilitando a los especialistas y personal médico el envío y seguimiento de solicitudes en tiempo real. A través de la Dirección General, se establecerá un control eficiente con un sistema de validación prioritaria, que dará relevancia a las solicitudes clínicas más críticas, priorizando aquellas que representen riesgos para la salud de los pacientes. Esto no solo mejorará la eficiencia operativa del hospital, sino que también garantizará que las operaciones clínicas y administrativas se gestionen con altos estándares de rendimiento, contribuyendo a un servicio médico de calidad.
 
 
 
