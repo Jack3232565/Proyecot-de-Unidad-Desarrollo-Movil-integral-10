@@ -13,6 +13,9 @@ En este repositorio se documentara todos los avaces del proyecto de unidad de la
 
  ![Funciones](img/tabla1.png)
 
+
+ ![alt text](image.png)
+
 ## Objetivo General
 
 <div style="text-align: justify">
