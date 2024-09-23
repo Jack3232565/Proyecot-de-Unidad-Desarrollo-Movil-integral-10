@@ -1,0 +1,37 @@
+Para visualizar el README se presiona control+ship-v
+
+--Cambio de rama 
+
+git checkout main
+
+-- Haz un pull de la rama main para asegurarte de que está actualizada:
+
+git pull origin main
+
+-- Fusiona la rama Carlos-Crespo en main:
+
+git merge Carlos-Crespo
+
+-- Realiza el commit de la fusión (si no lo ha hecho automáticamente): 
+
+git commit -m "Fusionando la rama Carlos-Crespo en main"
+
+-- Elimina la rama Carlos-Crespo: Primero, elimina la rama local.
+
+git branch -d Carlos-Crespo
+
+-- Luego, si también quieres eliminar la rama remota (en el servidor):
+
+git push origin --delete Carlos-Crespo
+
+-- Realiza el commit confirmando la eliminación de la rama:
+
+git commit --allow-empty -m "Rama Carlos-Crespo eliminada"
+
+-- Sube los cambios al repositorio remoto:
+
+git push origin main
+
+-------------------------------------------------------------------
+-- Entra a tu rama y Actuliza la rama con los ultimos cambios de la rama main con 
+git fetch origin
