@@ -28,12 +28,15 @@ Desarrollar una aplicación móvil que permita optimizar la gestión y supervisi
 
 <div style="text-align: justify">
 
-1.- Permitir a los especilistas de las areas de Trasplantes de Organos enviar las correspondientes solicitudes para la evaluacion de las solicitudes por el area de Direccion General.
-2.- Asignar respuesta oportuna en las solicitudes de manera inmedienta a la area correspondiente de solicitud.
-3.- Acelerar el flujo de solicitudes de acuerdo a la demanda esperada, evitando colas de botella en el proceso.
-4.- Crear una recopilacion de datos que permitan el pos analisis en la respuesta, previniendo conflictos futuros y mejoras en la gestion del sistema
-5.- Dar garantia que todas las solitudes tengan una respuesta inmediata en un tiempo de respuesta no prolongado, esto dara beneficio a las gestiones que se impten en la aplicacion de los sevicios medios a los derecho habientes.
-7.- Mejorar el control de personal que realiza las solicitudes, esto pemitira que cada procedimiento esto supervisado por un personal de salut que sea eficiente en la intevncion de cada procedimiento.
+1.- Facilitar a los especialistas de todas las áreas hospitalarias el envío eficiente de solicitudes para su evaluación por parte de la Dirección General, permitiendo que cada departamento pueda gestionar y coordinar sus requerimientos de manera integrada.
+2.- Garantizar la asignación de respuestas inmediatas y oportunas a las solicitudes que asegure el direccionamiento correcto hacia las áreas responsables, mejorando la coordinación interdepartamental.
+3.- Optimizar el flujo de solicitudes en función de la demanda y las prioridades, minimizando cuellos de botella y asegurando que los casos urgentes sean atendidos con rapidez.
+4.- Implementar una recopilación exhaustiva de datos sobre las solicitudes y respuestas, permitiendo el análisis post-proceso para identificar oportunidades de mejora, prevenir conflictos futuros y hacer ajustes que optimicen la gestión del sistema.
+5.- Garantizar tiempos de respuesta eficientes para todas las solicitudes, asegurando que ninguna quede sin ser atendida en un plazo razonable, lo cual beneficiará la calidad y rapidez de los servicios brindados a los derechohabientes.
+6.- Mejorar el control y la trazabilidad del personal encargado de gestionar las solicitudes, asegurando que cada procedimiento esté supervisado por personal capacitado, incrementando la eficiencia y efectividad en cada intervención.
+7.- Implementar mecanismos de priorización automatizados, basados en la urgencia y el tipo de solicitud, para garantizar que los casos críticos sean tratados de manera inmediata sin demoras innecesarias. 
+8.- Facilitar la transparencia y la trazabilidad de cada solicitud, asegurando que tanto los pacientes como los médicos puedan verificar el estado y la evolución de sus trámites en tiempo real, lo que aumentará la confianza en el sistema.
+9.- Mejorar la integración y comunicación entre áreas mediante una plataforma única que permita a todos los departamentos hospitalarios trabajar de manera colaborativa y eficiente en la gestión de las solicitudes.
 
 </div>
 
