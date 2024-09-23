@@ -31,3 +31,7 @@ git commit --allow-empty -m "Rama Carlos-Crespo eliminada"
 -- Sube los cambios al repositorio remoto:
 
 git push origin main
+
+-------------------------------------------------------------------
+-- Entra a tu rama y Actuliza la rama con los ultimos cambios de la rama main con 
+git fetch origin
