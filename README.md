@@ -20,7 +20,7 @@ En este repositorio se documentara todos los avaces del proyecto de unidad de la
 
 <div style="text-align: justify">
 
-Desarrollar una aplicacion web movil que permita mejorar el rendimiento de la capacidad funcional de las solicitudes que se ingresan en la aprobacion de procedimientos clinicos, permitiendo la disponibilidad actulizar dichas solicitudes en tiempo real y directa para las areas correspondientes que operan dentro dentro de las instalaciones Hospitalarias del Hospital PrivilegeCare.
+Desarrollar una aplicación móvil que permita optimizar la gestión y supervisión de las solicitudes de aprobación de procedimientos clínicos en el módulo de Dirección General del Hospital PrivilegeCare. La aplicación garantizará la actualización en tiempo real de las solicitudes, mejorando la eficiencia operativa y la coordinación entre las áreas correspondientes. Además, facilitará el seguimiento directo y la toma de decisiones administrativas dentro de las instalaciones hospitalarias, asegurando una respuesta ágil y efectiva a las necesidades clínicas y organizacionales.
 
 </div>
 
