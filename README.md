@@ -11,7 +11,7 @@ En este repositorio se documentara todos los avaces del proyecto de unidad de la
 
  ![Organigrama](img/Organigrama%20del%20Equipo.png)
 
- ![Funciones](img/tabla1.png)
+
 
 ## Objetivo General
 
