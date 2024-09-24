@@ -18,7 +18,7 @@ En este repositorio se documentara todos los avaces del proyecto de unidad de la
 
 ## Objetivo General
 
-<p style="text-align: justify">
+<div style="text-align: justify">
 
 Desarrollar una aplicación móvil que permita optimizar la gestión y supervisión de las solicitudes de aprobación de procedimientos clínicos en el módulo de Dirección General del Hospital PrivilegeCare. 
 
