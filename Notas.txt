@@ -35,3 +35,7 @@ git push origin main
 -------------------------------------------------------------------
 -- Entra a tu rama y Actuliza la rama con los ultimos cambios de la rama main con 
 git fetch origin
+
+-- Para Homologara los cambios de la rama main con la rama con la que se esta trabajando
+
+git merge origin/main
