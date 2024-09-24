@@ -14,7 +14,7 @@ En este repositorio se documentara todos los avaces del proyecto de unidad de la
 
 
 
- ![alt text](image.png)
+ ![alt text](img/image.png)
 
 ## Objetivo General
 
