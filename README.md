@@ -12,9 +12,9 @@ En este repositorio se documentara todos los avaces del proyecto de unidad de la
  ![Organigrama](img/Organigrama%20del%20Equipo.png)
 
 
+## Estrucutura de Desarrollo del Proyecto: 
 
-
- ![alt text](img/image.png)
+ ![alt text](img/Estrucutura%20de%20Etapas%20para%20el%20desarrollo%20del%20Proyecto%20de%20Direccion%20General.png)
 
 ## Objetivo General
 
@@ -258,14 +258,13 @@ https://www.figma.com/design/0t2dq3pWZYl7BOSUw25aC8/Dise%C3%B1o-Propuesto-Direcc
 
 Los requerimientos Funcionales son una parte esencial del proyecto, de ellos dependerá como el sistema debe funcionar de acuerdo a la configuración y distribución del entorno web, siguiendo el patrón antes mencionado en la propuesta anterior mente mencionado se explicarán alguna funciones esenciales en el maquetado web.
 
-**![RF](img/rf1.png)** 
-**![RF](img/rf2.png)** 
+**![RF](img/Requerimeintos%20Funcionales.png)** 
 
 ## Requerimientos No Funcionales
 
 Este tipo de requerimientos es lo que el usuario no puede visualizar, sin embargo, son la parte clave en la configuración del sistema, obedeciendo al esquema lógico y el comportamiento esperado en la configuración de la programación.  
 
-**![RF](img/rnf1.png)** 
+**![RF](img/Requerimeintos%20no%20Funcionales.png)** 
 
 
 ## Reglas de Negocio 
