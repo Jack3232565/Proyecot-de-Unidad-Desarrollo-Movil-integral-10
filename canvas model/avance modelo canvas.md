@@ -93,4 +93,14 @@ La información sobre el sistema se divulgará también a través de redes socia
 ---
 
 # **RELACIÓN CON LOS CLIENTES**
-(Información pendiente de agregar)
+En la Dirección General de un hospital, el contacto directo con diferentes áreas es crucial para mantener todo en orden. Imagina un día típico: el departamento de Recursos Humanos está lidiando con una falta de personal en urgencias, mientras que el equipo de administración está revisando el inventario y se da cuenta de que las reservas de material quirúrgico están bajas. En estos momentos, lo que menos queremos es que la comunicación se pierda o se vuelva lenta. Aquí es donde nuestra app entra en juego.
+
+Con la app, los directores pueden ver en tiempo real no solo lo que está pasando, sino quién está detrás de cada operación y decisión. Por ejemplo, si la jefa de Recursos Humanos, Laura, necesita contratar a un nuevo enfermero con urgencia, puede hacer la solicitud en el sistema y recibir la aprobación de inmediato, sin tener que pasar por largos procesos burocráticos.
+
+Además, la app facilita esas reuniones rápidas, a menudo improvisadas, que los directores suelen tener cuando algo urgente surge. Todo queda registrado, desde los pequeños cambios de turnos hasta decisiones más importantes, como la compra de nuevo equipo médico. Al contar con un sistema que centraliza la información y mantiene todos los procesos documentados, se evitan malentendidos y los directivos pueden tomar decisiones más informadas y rápidas.
+
+Un ejemplo claro sería una emergencia como la llegada masiva de pacientes después de un accidente grave en la ciudad. Antes, habría sido un caos intentar coordinar a todos, pero ahora, con nuestra app, la Dirección General puede coordinarse fácilmente con las áreas de Urgencias, Quirófanos y Logística, asegurándose de que cada paciente reciba atención inmediata sin comprometer los recursos.
+
+Otro punto es la relación directa con los proveedores. La app permite verificar si ciertos suministros médicos ya han sido solicitados y si están en camino. Por ejemplo, si a mitad de la jornada laboral descubren que los monitores cardíacos están a punto de agotarse, el director puede rápidamente consultar si ya están en proceso de entrega o si necesitan hacer un pedido urgente. De esta forma, el personal médico nunca se queda sin los materiales necesarios.
+
+La app no solo mejora la eficiencia operativa, sino que también mantiene a todos conectados y bien informados, lo que resulta en una atención más rápida, organizada y de mayor calidad.
