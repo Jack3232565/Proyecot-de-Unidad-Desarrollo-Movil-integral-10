@@ -11,7 +11,7 @@
 
 ---
 
-# **USUARIOS**
+# ** 1. USUARIOS**
 - **Médico:** Líder de equipo que tiene la responsabilidad de tomar decisiones que afectan al cuidado del paciente, incluyendo el diagnóstico y tratamiento, así como la supervisión del resto del equipo.
 - **Especialista:** Médico encargado de evaluar problemas médicos graves del paciente y recomendar el mejor tratamiento y diagnóstico.
 - **Defensores de pacientes:** Personal administrativo cuya función es ayudar a los pacientes que reciben atención en el hospital.
@@ -44,7 +44,7 @@ Permiten prácticas profesionales de estudiantes de Medicina y especialidades.
 
 ---
 
-# **VALOR AGREGADO**
+# **2. VALOR AGREGADO**
 La app móvil facilita la toma de decisiones al proporcionar acceso rápido y seguro a la información más relevante para la Dirección General, incluyendo indicadores clave, gestión de recursos y control de calidad en tiempo real. La integración entre las diversas áreas del hospital permite supervisar y optimizar procesos de manera remota, mejorando la eficiencia operativa.
 
 ### 1. **Acceso a Información Crítica en Tiempo Real**
@@ -82,7 +82,7 @@ La app genera proyecciones financieras basadas en el uso de recursos y servicios
 
 ---
 
-# **CANALES DE DISTRIBUCIÓN**
+# **3. CANALES DE DISTRIBUCIÓN**
 Los sistemas digitales permiten que productos lleguen a usuarios en todo el mundo a través de canales eficientes como el internet. La aplicación de Gestión de Aprobaciones Hospitalarias está diseñada para hospitales que buscan un sistema personalizado, eficiente y escalable.
 
 Para este fin, se pueden realizar alianzas con instituciones de salud interesadas, proporcionando una demostración y adaptando el sistema a sus necesidades específicas. La app estará disponible para dispositivos Android y iOS en nuestro sitio web oficial, donde también se puede acceder a más información, soporte y guías generales.
@@ -92,7 +92,7 @@ La información sobre el sistema se divulgará también a través de redes socia
 
 ---
 
-# **RELACIÓN CON LOS CLIENTES**
+# **4. RELACIÓN CON LOS CLIENTES**
 En la Dirección General de un hospital, el contacto directo con diferentes áreas es crucial para mantener todo en orden. Imagina un día típico: el departamento de Recursos Humanos está lidiando con una falta de personal en urgencias, mientras que el equipo de administración está revisando el inventario y se da cuenta de que las reservas de material quirúrgico están bajas. En estos momentos, lo que menos queremos es que la comunicación se pierda o se vuelva lenta. Aquí es donde nuestra app entra en juego.
 
 Con la app, los directores pueden ver en tiempo real no solo lo que está pasando, sino quién está detrás de cada operación y decisión. Por ejemplo, si la jefa de Recursos Humanos, Laura, necesita contratar a un nuevo enfermero con urgencia, puede hacer la solicitud en el sistema y recibir la aprobación de inmediato, sin tener que pasar por largos procesos burocráticos.
@@ -105,10 +105,24 @@ Otro punto es la relación directa con los proveedores. La app permite verificar
 
 La app no solo mejora la eficiencia operativa, sino que también mantiene a todos conectados y bien informados, lo que resulta en una atención más rápida, organizada y de mayor calidad.
 
-
 ---
 
-### Socios Clave
+# **5. Ingresos**
+
+
+
+
+# **6. Recursos clave**
+
+
+# **7. Actividades clave**
+
+
+
+
+
+---
+# **8. Socios Clave**
 
 En un hospital, los socios clave son literalmente los pilares sobre los que se sostienen muchas de las operaciones diarias. No estamos hablando solo de los grandes proveedores o las instituciones de salud, sino de aquellos que ayudan a que todo funcione sin que los demás se den cuenta. Desde los proveedores de equipos médicos hasta las empresas que gestionan los servicios de TI, todos tienen un papel fundamental.
 
@@ -119,3 +133,6 @@ Otro socio clave es la empresa que gestiona los sistemas de información. Sin el
 También están las farmacéuticas, que juegan un papel esencial en mantener abastecidas las áreas de farmacia del hospital. Digamos que hay un medicamento que de repente se vuelve crítico porque la demanda ha subido. Gracias a la integración con estos socios, se puede rastrear el estado de los pedidos y saber cuándo llegará ese suministro urgente.
 
 Por último, las entidades regulatorias. Estas instituciones aseguran que el hospital cumple con todas las normativas sanitarias y de calidad. Por ejemplo, si la Dirección General necesita verificar si se está cumpliendo una nueva normativa de seguridad, la app puede generar informes de cumplimiento con un par de clics y enviarlos directamente a las autoridades correspondientes, sin necesidad de largas gestiones burocráticas.
+
+
+# **9. Costos**
