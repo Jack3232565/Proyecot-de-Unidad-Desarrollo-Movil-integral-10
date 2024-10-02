@@ -138,8 +138,41 @@ Las conexiones con otras instituciones de salud y proveedores también son recur
 
 # **7. Actividades clave**
 
+1. Monitoreo y Análisis de Indicadores
+Una de las tareas más importantes es el monitoreo constante de indicadores clave. La app permite a la Dirección General revisar en tiempo real métricas como la ocupación de camas, el estado de los recursos médicos, o el rendimiento de los diferentes departamentos. Estos indicadores no solo permiten evaluar la situación actual del hospital, sino también detectar posibles cuellos de botella y áreas de mejora.
+
+Si la app muestra que hay saturación en urgencias, se puede actuar rápidamente para redistribuir personal o coordinar con otros hospitales.
+
+2. Gestión de Recursos
+La gestión eficiente de los recursos es otro pilar fundamental. Esto implica desde la asignación y redistribución del personal, hasta la supervisión del uso de equipos médicos y suministros. La app permite recibir alertas en caso de que algún recurso esté cerca de agotarse o si algún equipo presenta fallas.
+
+Si el inventario de medicamentos críticos está bajo, la Dirección General puede activar una reposición inmediata para evitar que se interrumpa el tratamiento de los pacientes.
+
+3. Coordinación con Departamentos
+Mantener una comunicación fluida con las áreas clave del hospital es esencial. La Dirección General necesita coordinarse de manera eficaz con departamentos como Recursos Humanos, Finanzas, Medicina, ect. A través de la app, esta comunicación es rápida y estructurada, lo que garantiza que todos los departamentos trabajen alineados con los objetivos estratégicos del hospital.
+
+Si surge una emergencia, la app permite coordinar la respuesta entre varios departamentos en tiempo récord, optimizando el tiempo de reacción ante cualquier eventualidad.
+
+4. Supervisión de Procesos Operativos
+La supervisión de procesos dentro de áreas críticas como quirófanos, urgencias y unidades de cuidados es otra de las actividades clave. La Dirección General utiliza la app para monitorear el flujo de trabajo en estas áreas, identificando ineficiencias o retrasos.
+
+Si un quirófano queda inactivo por demasiado tiempo entre operaciones, la Dirección General puede tomar decisiones para optimizar el uso de estas instalaciones.
+
+5. Toma de Decisiones Basada en Datos
+La toma de decisiones basada en datos es uno de los puntos de la app. Gracias a la integración de datos históricos y en tiempo real, la Dirección General puede evaluar tendencias, rendimiento y necesidades del hospital. Esto permite tomar decisiones estratégicas más informadas, tanto a nivel operativo como financiero.
 
 
+6. Aseguramiento de la Calidad
+La evaluación continua de la calidad de los servicios médicos y administrativos es fundamental. La app facilita este proceso al mostrar indicadores clave relacionados con la atención al paciente, el uso de recursos y la eficiencia operativa. Estos datos permiten ajustar protocolos y asegurar que se mantengan altos estándares de calidad.
+
+Si la app detecta que los tiempos de espera para atención médica han aumentado, se pueden tomar medidas inmediatas para redistribuir personal y reducir esos tiempos.
+
+7. Cumplimiento Normativo
+El cumplimiento de normativas y regulaciones es esencial para que el hospital opere sin inconvenientes legales. La app ayuda a supervisar el cumplimiento de estas normativas mediante la generación de reportes automáticos, facilitando la auditoría interna y la preparación ante cualquier inspección.
+
+
+8. Gestión de Contingencias
+La gestión de contingencias es una actividad clave que garantiza que el hospital esté preparado ante situaciones de crisis. La app permite recibir alertas en tiempo real sobre emergencias o problemas críticos, como la saturación de camas o la falta de suministros médicos, permitiendo a la Dirección General tomar medidas inmediatas para mitigar el impacto.
 
 
 ---
