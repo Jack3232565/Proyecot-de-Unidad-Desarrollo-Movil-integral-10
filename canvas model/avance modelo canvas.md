@@ -104,3 +104,18 @@ Un ejemplo claro sería una emergencia como la llegada masiva de pacientes despu
 Otro punto es la relación directa con los proveedores. La app permite verificar si ciertos suministros médicos ya han sido solicitados y si están en camino. Por ejemplo, si a mitad de la jornada laboral descubren que los monitores cardíacos están a punto de agotarse, el director puede rápidamente consultar si ya están en proceso de entrega o si necesitan hacer un pedido urgente. De esta forma, el personal médico nunca se queda sin los materiales necesarios.
 
 La app no solo mejora la eficiencia operativa, sino que también mantiene a todos conectados y bien informados, lo que resulta en una atención más rápida, organizada y de mayor calidad.
+
+
+---
+
+### Socios Clave
+
+En un hospital, los socios clave son literalmente los pilares sobre los que se sostienen muchas de las operaciones diarias. No estamos hablando solo de los grandes proveedores o las instituciones de salud, sino de aquellos que ayudan a que todo funcione sin que los demás se den cuenta. Desde los proveedores de equipos médicos hasta las empresas que gestionan los servicios de TI, todos tienen un papel fundamental.
+
+Pongamos un ejemplo claro. Imagina que el hospital recibe una nueva remesa de respiradores. Estos equipos no solo llegan de la nada, sino que han sido gestionados por una empresa proveedora clave que se asegura de que siempre haya stock cuando es necesario. Con nuestra app, la Dirección General puede supervisar si esos pedidos llegan a tiempo y, si no lo hacen, tomar acción rápidamente. Así, el hospital siempre tiene el equipo que necesita, especialmente en situaciones críticas.
+
+Otro socio clave es la empresa que gestiona los sistemas de información. Sin ellos, sería imposible garantizar que los historiales médicos, las órdenes de medicamentos y las citas de los pacientes estén siempre actualizadas y accesibles. Por ejemplo, si hay una caída en el sistema, la app notifica inmediatamente a la Dirección General, quienes pueden ponerse en contacto con la empresa de TI para solucionar el problema antes de que afecte gravemente las operaciones del hospital.
+
+También están las farmacéuticas, que juegan un papel esencial en mantener abastecidas las áreas de farmacia del hospital. Digamos que hay un medicamento que de repente se vuelve crítico porque la demanda ha subido. Gracias a la integración con estos socios, se puede rastrear el estado de los pedidos y saber cuándo llegará ese suministro urgente.
+
+Por último, las entidades regulatorias. Estas instituciones aseguran que el hospital cumple con todas las normativas sanitarias y de calidad. Por ejemplo, si la Dirección General necesita verificar si se está cumpliendo una nueva normativa de seguridad, la app puede generar informes de cumplimiento con un par de clics y enviarlos directamente a las autoridades correspondientes, sin necesidad de largas gestiones burocráticas.
