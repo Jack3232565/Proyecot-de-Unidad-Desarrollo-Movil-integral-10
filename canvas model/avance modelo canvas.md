@@ -111,9 +111,30 @@ La app no solo mejora la eficiencia operativa, sino que también mantiene a todo
 
 
 
+---
 
 # **6. Recursos clave**
 
+Cuando se habla de recursos clave para la Dirección General en un hospital, no solo se refiere a los grandes activos visibles, como los equipos médicos o la infraestructura física. Existen también otros recursos menos tangibles pero igualmente esenciales que permiten que todo el sistema funcione de manera eficiente y coordinada.
+
+1. Plataforma Tecnológica y Sistemas de Información:
+Uno de los pilares fundamentales es la infraestructura tecnológica. La plataforma que respalda la app móvil asegura que todos los sistemas del hospital estén interconectados y funcionando sin interrupciones. Esto incluye la capacidad de integrar información crítica de diversas áreas del hospital, como la disponibilidad de camas, el estado de los equipos médicos, y el seguimiento en tiempo real de las operaciones hospitalarias.
+
+Por ejemplo, en caso de requerir un reporte instantáneo sobre la capacidad actual de la Unidad de Cuidados Intensivos (UCI), la app facilita el acceso a dicha información, optimizando la toma de decisiones sin margen de error.
+
+2. Personal Médico y Administrativo:
+El capital humano es uno de los recursos de suma importanciaa para la gestión hospitalaria. Médicos, enfermeras, técnicos y personal administrativo son quienes, a través de su trabajo, mantienen la operación diaria. La app provee a la Dirección General acceso directo a datos relacionados con la productividad del personal, permitiendo supervisar turnos, tiempos de respuesta y carga laboral, contribuyendo así a la eficiente asignación de recursos humanos.
+
+3. Equipos Médicos y Suministros:
+La disponibilidad y el mantenimiento de los equipos médicos y suministros son igualmente fundamentales. Dispositivos como monitores de signos vitales, respiradores y tomógrafos, entre otros, son esenciales para asegurar la adecuada atención a los pacientes. A través de la app, la Dirección General puede recibir alertas sobre fallos o desabastecimientos en equipos y suministros críticos, asegurando una respuesta rápida que evite interrupciones en el servicio.
+
+4. Datos e Información:
+El manejo y análisis de datos en tiempo real constituye un recurso estratégico. La app permite recolectar y visualizar información histórica, así como datos operativos en tiempo real, lo que facilita la evaluación de tendencias y el desempeño general del hospital.
+
+Por ejemplo, con la información proporcionada por la app, es posible identificar patrones que sugieran un aumentao en la demanda de ciertos servicios, permitiendo a la Dirección General ajustar los recursos de manera procactiva.
+
+5. Relaciones Institucionales:
+Las conexiones con otras instituciones de salud y proveedores también son recursos clave para asegurar el acceso a apoyo y recursos externos cuando se necesitan. La Dirección General puede utilizar la app para gestionar la comunicación con estas instituciones de manera rápida y eficiente, lo que permite coordinar esfuerzos en situaciones de alta demanda o contingencias.
 
 # **7. Actividades clave**
 
