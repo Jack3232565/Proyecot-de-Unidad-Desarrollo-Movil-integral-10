@@ -133,61 +133,61 @@ A través de la app, el hospital puede coordinarse mejor con otras instituciones
 
 Cuando se habla de recursos clave para la Dirección General en un hospital, no solo se refiere a los grandes activos visibles, como los equipos médicos o la infraestructura física. Existen también otros recursos menos tangibles pero igualmente esenciales que permiten que todo el sistema funcione de manera eficiente y coordinada.
 
-1. Plataforma Tecnológica y Sistemas de Información:
+### 1. ** Plataforma Tecnológica y Sistemas de Información:
 Uno de los pilares fundamentales es la infraestructura tecnológica. La plataforma que respalda la app móvil asegura que todos los sistemas del hospital estén interconectados y funcionando sin interrupciones. Esto incluye la capacidad de integrar información crítica de diversas áreas del hospital, como la disponibilidad de camas, el estado de los equipos médicos, y el seguimiento en tiempo real de las operaciones hospitalarias.
 
 Por ejemplo, en caso de requerir un reporte instantáneo sobre la capacidad actual de la Unidad de Cuidados Intensivos (UCI), la app facilita el acceso a dicha información, optimizando la toma de decisiones sin margen de error.
 
-2. Personal Médico y Administrativo:
+### 2. ** Personal Médico y Administrativo:
 El capital humano es uno de los recursos de suma importanciaa para la gestión hospitalaria. Médicos, enfermeras, técnicos y personal administrativo son quienes, a través de su trabajo, mantienen la operación diaria. La app provee a la Dirección General acceso directo a datos relacionados con la productividad del personal, permitiendo supervisar turnos, tiempos de respuesta y carga laboral, contribuyendo así a la eficiente asignación de recursos humanos.
 
-3. Equipos Médicos y Suministros:
+### 3. ** Equipos Médicos y Suministros:
 La disponibilidad y el mantenimiento de los equipos médicos y suministros son igualmente fundamentales. Dispositivos como monitores de signos vitales, respiradores y tomógrafos, entre otros, son esenciales para asegurar la adecuada atención a los pacientes. A través de la app, la Dirección General puede recibir alertas sobre fallos o desabastecimientos en equipos y suministros críticos, asegurando una respuesta rápida que evite interrupciones en el servicio.
 
-4. Datos e Información:
+### 4. ** Datos e Información:
 El manejo y análisis de datos en tiempo real constituye un recurso estratégico. La app permite recolectar y visualizar información histórica, así como datos operativos en tiempo real, lo que facilita la evaluación de tendencias y el desempeño general del hospital.
 
 Por ejemplo, con la información proporcionada por la app, es posible identificar patrones que sugieran un aumentao en la demanda de ciertos servicios, permitiendo a la Dirección General ajustar los recursos de manera procactiva.
 
-5. Relaciones Institucionales:
+### 5. ** Relaciones Institucionales:
 Las conexiones con otras instituciones de salud y proveedores también son recursos clave para asegurar el acceso a apoyo y recursos externos cuando se necesitan. La Dirección General puede utilizar la app para gestionar la comunicación con estas instituciones de manera rápida y eficiente, lo que permite coordinar esfuerzos en situaciones de alta demanda o contingencias.
 
 # **7. Actividades clave**
 
-1. Monitoreo y Análisis de Indicadores
+### 1. ** Monitoreo y Análisis de Indicadores
 Una de las tareas más importantes es el monitoreo constante de indicadores clave. La app permite a la Dirección General revisar en tiempo real métricas como la ocupación de camas, el estado de los recursos médicos, o el rendimiento de los diferentes departamentos. Estos indicadores no solo permiten evaluar la situación actual del hospital, sino también detectar posibles cuellos de botella y áreas de mejora.
 
 Si la app muestra que hay saturación en urgencias, se puede actuar rápidamente para redistribuir personal o coordinar con otros hospitales.
 
-2. Gestión de Recursos
+### 2. ** Gestión de Recursos
 La gestión eficiente de los recursos es otro pilar fundamental. Esto implica desde la asignación y redistribución del personal, hasta la supervisión del uso de equipos médicos y suministros. La app permite recibir alertas en caso de que algún recurso esté cerca de agotarse o si algún equipo presenta fallas.
 
 Si el inventario de medicamentos críticos está bajo, la Dirección General puede activar una reposición inmediata para evitar que se interrumpa el tratamiento de los pacientes.
 
-3. Coordinación con Departamentos
+### 3. ** Coordinación con Departamentos
 Mantener una comunicación fluida con las áreas clave del hospital es esencial. La Dirección General necesita coordinarse de manera eficaz con departamentos como Recursos Humanos, Finanzas, Medicina, ect. A través de la app, esta comunicación es rápida y estructurada, lo que garantiza que todos los departamentos trabajen alineados con los objetivos estratégicos del hospital.
 
 Si surge una emergencia, la app permite coordinar la respuesta entre varios departamentos en tiempo récord, optimizando el tiempo de reacción ante cualquier eventualidad.
 
-4. Supervisión de Procesos Operativos
+### 4. ** Supervisión de Procesos Operativos
 La supervisión de procesos dentro de áreas críticas como quirófanos, urgencias y unidades de cuidados es otra de las actividades clave. La Dirección General utiliza la app para monitorear el flujo de trabajo en estas áreas, identificando ineficiencias o retrasos.
 
 Si un quirófano queda inactivo por demasiado tiempo entre operaciones, la Dirección General puede tomar decisiones para optimizar el uso de estas instalaciones.
 
-5. Toma de Decisiones Basada en Datos
+### 5. ** Toma de Decisiones Basada en Datos
 La toma de decisiones basada en datos es uno de los puntos de la app. Gracias a la integración de datos históricos y en tiempo real, la Dirección General puede evaluar tendencias, rendimiento y necesidades del hospital. Esto permite tomar decisiones estratégicas más informadas, tanto a nivel operativo como financiero.
 
 
-6. Aseguramiento de la Calidad
+### 6. ** Aseguramiento de la Calidad
 La evaluación continua de la calidad de los servicios médicos y administrativos es fundamental. La app facilita este proceso al mostrar indicadores clave relacionados con la atención al paciente, el uso de recursos y la eficiencia operativa. Estos datos permiten ajustar protocolos y asegurar que se mantengan altos estándares de calidad.
 
 Si la app detecta que los tiempos de espera para atención médica han aumentado, se pueden tomar medidas inmediatas para redistribuir personal y reducir esos tiempos.
 
-7. Cumplimiento Normativo
+### 7. ** Cumplimiento Normativo
 El cumplimiento de normativas y regulaciones es esencial para que el hospital opere sin inconvenientes legales. La app ayuda a supervisar el cumplimiento de estas normativas mediante la generación de reportes automáticos, facilitando la auditoría interna y la preparación ante cualquier inspección.
 
 
-8. Gestión de Contingencias
+### 8. ** Gestión de Contingencias
 La gestión de contingencias es una actividad clave que garantiza que el hospital esté preparado ante situaciones de crisis. La app permite recibir alertas en tiempo real sobre emergencias o problemas críticos, como la saturación de camas o la falta de suministros médicos, permitiendo a la Dirección General tomar medidas inmediatas para mitigar el impacto.
 
 
@@ -206,3 +206,27 @@ Por último, las entidades regulatorias. Estas instituciones aseguran que el hos
 
 
 # **9. Costos**
+
+### 1. ** Desarrollo y Mantenimiento de la App**
+El costo inicial más significativo está relacionado con el desarrollo de la app móvil. Esto incluye la contratación de programadores, diseñadores y especialistas en experiencia de usuario (UX) para crear una plataforma sólida que integre todos los sistemas del hospital. Además, hay costos recurrentes de mantenimiento y actualización, ya que la tecnología avanza constantemente y la app necesitará mejoras periódicas para optimizar su funcionamiento y seguridad.
+
+### 2. ** Infraestructura Tecnológica**
+Para que la app funcione sin interrupciones, es necesario contar con una infraestructura tecnológica robusta. Esto implica inversiones en servidores, almacenamiento en la nube, y software de gestión de datos. Los costos asociados a la infraestructura son recurrentes y esenciales para garantizar que la app siga funcionando de manera eficiente y sin interrupciones, especialmente en situaciones críticas donde la información debe fluir rápidamente.
+
+### 3. ** Personal Especializado**
+La gestión y operación de la app requiere personal especializado en tecnología y seguridad de la información. Esto incluye un equipo de soporte técnico que monitoree el funcionamiento de la app, solucione problemas, y garantice la seguridad de los datos. También es necesario entrenar al personal administrativo y médico en el uso de la app, lo que conlleva costos de capacitación.
+
+### 4. ** Licencias y Software de Terceros**
+La app puede depender de software de terceros o de servicios en la nube que tienen costos de licencia. Estos pagos pueden ser mensuales o anuales y son esenciales para garantizar que la app utilice herramientas avanzadas y seguras. Además, pueden haber costos adicionales si se integran sistemas externos, como bases de datos médicas o plataformas de gestión hospitalaria.
+
+### 5. ** Costos de Seguridad y Cumplimiento**
+Un aspecto crítico es la seguridad de los datos. Dado que la app maneja información sensible, como historiales médicos y datos personales de los pacientes, es crucial invertir en sistemas de ciberseguridad y en el cumplimiento de normativas legales, como las leyes de protección de datos. Esto implica costos de auditorías, certificados de seguridad y herramientas de encriptación para proteger la información.
+
+### 6. ** Equipamiento y Actualización de Dispositivos**
+Para que el personal del hospital use la app de manera eficiente, a veces es necesario invertir en dispositivos móviles o tabletas. Estos equipos deben estar actualizados para soportar la app y permitir que los médicos, enfermeras y el personal administrativo puedan acceder a la información en tiempo real. La compra y renovación de este equipamiento es un costo que debe ser considerado.
+
+### 7. ** Integración con Otros Sistemas**
+La app necesita estar conectada con otros sistemas del hospital, como el sistema de gestión de citas, el manejo de inventarios médicos y el sistema de facturación. La integración de estos sistemas podria generar costos adicionales, tanto en términos de tiempo como de recursos técnicos, para asegurar que la app funcione correctamente con las plataformas existentes.
+
+### 8. ** Actualizaciones y Mejoras Constantes**
+La tecnología cambia rápidamente, y para que la app siga siendo eficiente, es necesario invertir en actualizaciones periódicas que mejoren la funcionalidad, la experiencia del usuario y la seguridad. Esto incluye no solo nuevas versiones de la app, sino también actualizaciones de las bases de datos y servidores.
