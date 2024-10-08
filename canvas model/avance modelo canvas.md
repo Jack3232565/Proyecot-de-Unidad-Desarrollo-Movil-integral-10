@@ -11,7 +11,7 @@
 
 ---
 
-# **1. USUARIOS**
+# **1. Clientes**
 - **Médico:** Líder de equipo que tiene la responsabilidad de tomar decisiones que afectan al cuidado del paciente, incluyendo el diagnóstico y tratamiento, así como la supervisión del resto del equipo.
 - **Especialista:** Médico encargado de evaluar problemas médicos graves del paciente y recomendar el mejor tratamiento y diagnóstico.
 - **Defensores de pacientes:** Personal administrativo cuya función es ayudar a los pacientes que reciben atención en el hospital.
@@ -19,6 +19,9 @@
 - **Dirección de Enfermería:** Grupo encargado de organizar y supervisar todo el trabajo de enfermería realizado en el hospital.
 - **Pacientes:** Individuos que buscan atención o reciben cuidados de salud para mejorar su bienestar.
 - **Familiar del Paciente:** Persona responsable de la toma de decisiones en caso de que el paciente no esté en condiciones de hacerlo (menor de edad o inconsciente).
+- **Hospitales publicos y privados:** Establecimiento destinado al diagnóstico y tratamiento de enfermos, donde a menudo se practican la investigación y la docencia 
+- **Farmaceuticas:** Una empresa que invierte en la investigación, producción y comercialización de fármacos/medicamentos para el tratamiento de enfermedades, basándose en datos médicos e informes de pacientes para el descubrimiento de fármacos .
+- **Laboratorios:** Son aquellos donde los expertos en diagnóstico clínico desarrollan los análisis que contribuyen al estudio, la prevención, el diagnóstico y el tratamiento de los problemas de salud.
 
 ## **Dirección y Gestión de Servicios Generales**
 Engloba diversas áreas como:
