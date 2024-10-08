@@ -11,7 +11,7 @@
 
 ---
 
-# **1. Clientes**
+# **1. CLIENTES**
 - **Médico:** Líder de equipo que tiene la responsabilidad de tomar decisiones que afectan al cuidado del paciente, incluyendo el diagnóstico y tratamiento, así como la supervisión del resto del equipo.
 - **Especialista:** Médico encargado de evaluar problemas médicos graves del paciente y recomendar el mejor tratamiento y diagnóstico.
 - **Defensores de pacientes:** Personal administrativo cuya función es ayudar a los pacientes que reciben atención en el hospital.
