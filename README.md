@@ -28,24 +28,32 @@ En este repositorio se documentara todos los avaces del proyecto de unidad de la
 
 <div style="text-align: justify">
 
-1. Facilitar a los especialistas de todas las áreas hospitalarias el envío eficiente de solicitudes para su evaluación por parte de la Dirección General, permitiendo que cada departamento pueda gestionar y coordinar sus requerimientos de manera integrada.
+1. Fomentar la colaboración interdepartamental:
+Desarrollar una plataforma única que potencie la comunicación y colaboración entre departamentos del hospital, facilitando la gestión de solicitudes de manera eficiente.
 
-2. Garantizar la asignación de respuestas inmediatas y oportunas a las solicitudes que asegure el direccionamiento correcto hacia las áreas responsables, mejorando la coordinación interdepartamental.
+2. Optimizar el proceso de envío de solicitudes: 
+Implementar un sistema que permita a los especialistas de todas las áreas hospitalarias enviar solicitudes de manera rápida y efectiva para su evaluación por parte de la Dirección General.
 
-3. Optimizar el flujo de solicitudes en función de la demanda y las prioridades, minimizando cuellos de botella y asegurando que los casos urgentes sean atendidos con rapidez.
+3. Priorizar solicitudes de manera automatizada: 
+Establecer mecanismos automatizados de priorización basados en la urgencia y el tipo de solicitud, garantizando una atención inmediata a los casos críticos.
 
-4. Implementar una recopilación exhaustiva de datos sobre las solicitudes y respuestas, permitiendo el análisis post-proceso para identificar oportunidades de mejora, prevenir conflictos futuros y hacer ajustes que optimicen la gestión del sistema.
+4. Aumentar la eficiencia en el flujo de solicitudes: 
+Optimizar el flujo de solicitudes ajustándose a la demanda y las prioridades, minimizando cuellos de botella y asegurando una respuesta ágil a los casos urgentes.
 
-5. Garantizar tiempos de respuesta eficientes para todas las solicitudes, asegurando que ninguna quede sin ser atendida en un plazo razonable, lo cual beneficiará la calidad y rapidez de los servicios brindados a los derechohabientes.
+5. Asegurar tiempos de respuesta efectivos: 
+Implementar un protocolo que garantice tiempos de respuesta eficientes para todas las solicitudes, asegurando que ninguna quede sin atender en un plazo razonable y mejorando la calidad del servicio.
 
-6. Mejorar el control y la trazabilidad del personal encargado de gestionar las solicitudes, asegurando que cada procedimiento esté supervisado por personal capacitado, incrementando la eficiencia y efectividad en cada intervención.
+6. Mejorar la coordinación de respuestas: 
+Establecer un sistema que garantice respuestas inmediatas y adecuadas a las solicitudes, asegurando que sean dirigidas correctamente a las áreas responsables.
 
-7. Implementar mecanismos de priorización automatizados, basados en la urgencia y el tipo de solicitud, para garantizar que los casos críticos sean tratados de manera inmediata sin demoras innecesarias. 
+7. Fortalecer el control y trazabilidad de solicitudes: 
+Implementar un sistema de control que asegure que todas las solicitudes sean gestionadas por personal capacitado, incrementando la eficiencia y efectividad en cada intervención.
 
-8. Facilitar la transparencia y la trazabilidad de cada solicitud, asegurando que tanto los pacientes como los médicos puedan verificar el estado y la evolución de sus trámites en tiempo real, lo que aumentará la confianza en el sistema.
+8. Facilitar la transparencia en el seguimiento: 
+Desarrollar herramientas que permitan a pacientes y médicos verificar en tiempo real el estado y progreso de sus solicitudes, aumentando la confianza en el sistema.
 
-9. Mejorar la integración y comunicación entre áreas mediante una plataforma única que permita a todos los departamentos hospitalarios trabajar de manera colaborativa y eficiente en la gestión de las solicitudes.
-
+9. Realizar un análisis exhaustivo de datos: 
+Implementar un sistema de recopilación de datos sobre solicitudes y respuestas, permitiendo un análisis posterior para identificar oportunidades de mejora y ajustar procesos que optimicen la gestión.
 </div>
 
 
