@@ -20,9 +20,7 @@ En este repositorio se documentara todos los avaces del proyecto de unidad de la
 
 <div style="text-align: justify">
 
-Desarrollar una aplicación móvil que permita optimizar la gestión y supervisión de las solicitudes de aprobación de procedimientos clínicos en el módulo de Dirección General del Hospital PrivilegeCare. 
-
-La aplicación garantizará la actualización en tiempo real de las solicitudes, mejorando la eficiencia operativa y la coordinación entre las áreas correspondientes. Además, facilitará el seguimiento directo y la toma de decisiones administrativas dentro de las instalaciones hospitalarias, asegurando una respuesta ágil y efectiva a las necesidades clínicas y organizacionales.
+ Desarrollar una aplicación móvil que facilite la gestión eficaz y la administración de la Dirección General del hospital PrivilegeCare, utilizando herramientas de TIC para optimizar procesos, mejorar la toma de decisiones y aumentar la eficiencia operativa.
 
 </div>
 
