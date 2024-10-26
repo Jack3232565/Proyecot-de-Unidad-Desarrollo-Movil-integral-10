@@ -20,7 +20,7 @@ En este repositorio se documentara todos los avaces del proyecto de unidad de la
 
 <div style="text-align: justify">
 
- Desarrollar una aplicación móvil que facilite la gestión eficaz y la administración de la Dirección General del hospital PrivilegeCare, utilizando herramientas de TIC para optimizar procesos, mejorar la toma de decisiones y aumentar la eficiencia operativa.
+Desarrollar una aplicación móvil que facilite la gestión eficaz y la administración de la Dirección General del “Hospital PrivilegeCare”, utilizando herramientas de TIC para optimizar procesos, mejorar la gestión de solicitudes hospitalarias.
 
 </div>
 
