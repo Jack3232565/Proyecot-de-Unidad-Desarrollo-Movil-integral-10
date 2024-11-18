@@ -23,9 +23,12 @@ class _EstadisticaScreenState extends State<EstadisticaScreen> {
   Map<String, Map<String, int>> estatusTipoCount = {
     'Aprobado': {'Administrativo': 0, 'Traslados': 0, 'Servicio Interno': 0, 'Subrogado': 0},
     'En Proceso': {'Administrativo': 0, 'Traslados': 0, 'Servicio Interno': 0, 'Subrogado': 0},
-    'Reprogramado': {'Administrativo': 0, 'Traslados': 0, 'Servicio Interno': 0, 'Subrogado': 0},
+    'Reprogramada': {'Administrativo': 0, 'Traslados': 0, 'Servicio Interno': 0, 'Subrogado': 0},
     'Pausado': {'Administrativo': 0, 'Traslados': 0, 'Servicio Interno': 0, 'Subrogado': 0},
-    'Cancelado': {'Administrativo': 0, 'Traslados': 0, 'Servicio Interno': 0, 'Subrogado': 0},
+    'Cancelada': {'Administrativo': 0, 'Traslados': 0, 'Servicio Interno': 0, 'Subrogado': 0},
+    'Programada': {'Administrativo': 0, 'Traslados': 0, 'Servicio Interno': 0, 'Subrogado': 0},
+    'Registrada': {'Administrativo': 0, 'Traslados': 0, 'Servicio Interno': 0, 'Subrogado': 0},
+    'Realizada': {'Administrativo': 0, 'Traslados': 0, 'Servicio Interno': 0, 'Subrogado': 0},
   };
 
   List<RoleData> roleData = [];
