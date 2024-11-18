@@ -36,6 +36,7 @@ dependencies:
   google_fonts: ^4.0.3 # Fuentes de google
   intl: ^0.18.0 # Internacionalizacion para la hora y fecha
   syncfusion_flutter_charts: ^20.1.55
+  image_picker: ^0.8.5+3
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -76,6 +77,7 @@ flutter:
     - assets/EOrganicaH.png
     - assets/Estadisitica.png
     - assets/Bitacora.png
+    - assets/icono_facebook.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

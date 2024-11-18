@@ -78,18 +78,18 @@ drawer: Drawer(
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const DrawerHeader(
-              child: Center(child: CircularProgressIndicator()),
               decoration: BoxDecoration(color: Colors.blue),
+              child: Center(child: CircularProgressIndicator()),
             );
           } else if (snapshot.hasError) {
             return const DrawerHeader(
-              child: Center(child: Text("Error al cargar datos del usuario")),
               decoration: BoxDecoration(color: Colors.blue),
+              child: Center(child: Text("Error al cargar datos del usuario")),
             );
           } else if (!snapshot.hasData || snapshot.data == null) {
             return const DrawerHeader(
-              child: Center(child: Text("No se encontró información del usuario")),
               decoration: BoxDecoration(color: Colors.blue),
+              child: Center(child: Text("No se encontró información del usuario")),
             );
           } else {
             final userData = snapshot.data!;
@@ -324,7 +324,7 @@ ListTile(
   }
 
   Widget _buildDrawerContent(BuildContext context) {
-    return Drawer(
+    return const Drawer(
       // Contenido del Drawer
     );
   }

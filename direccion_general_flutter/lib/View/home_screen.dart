@@ -85,11 +85,11 @@ class _HomeScreenState extends State<HomeScreen> {
           future: userDataFuture,
           builder: (context, snapshot) {
             if (snapshot.connectionState == ConnectionState.waiting) {
-              return CircularProgressIndicator();
+              return const CircularProgressIndicator();
             } else if (snapshot.hasError) {
               return Text("Error: ${snapshot.error}");
             } else if (!snapshot.hasData || snapshot.data == null) {
-              return Text("No se encontró información del usuario");
+              return const Text("No se encontró información del usuario");
             } else {
               final userData = snapshot.data!;
               // Imprime el valor de la fotografía para depuración
@@ -131,7 +131,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             },
                           ),
                         )
-                      : Text("No hay fotografía disponible"),
+                      : const Text("No hay fotografía disponible"),
                       
                       const SizedBox(height: 20),//Espaciado entre la imagen del usuario y el correo del usuario
                     

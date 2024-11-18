@@ -22,7 +22,7 @@ Widget build(BuildContext context) {
     width: 500,
     child: SfCartesianChart(
       primaryXAxis: CategoryAxis(
-        labelStyle: TextStyle(
+        labelStyle: const TextStyle(
           fontSize: 5, // Ajusta el tamaño del texto de las etiquetas en el eje X
         ),
       ),

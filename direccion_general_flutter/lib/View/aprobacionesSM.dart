@@ -284,7 +284,7 @@ Future<void> fetchSolicitudes() async {
 
             ElevatedButton(
                       onPressed: () => _showCreateAprobacionModal(context),
-                      child: Text('Crear Aprobación'),
+                      child: const Text('Crear Aprobación'),
                     ),
 
             _buildSolicitudesTable(), //Agregar el widget _buildSolicitudesTable para mostrar la tabla de solicitudes
@@ -362,7 +362,7 @@ List<DataRow> _buildDataRows() {// Cambiado a List<DataRow> para que coincida co
           : 'Solicitud no disponible';
     //-------------
 
-    return DataRow(
+    return DataRow(// Se agrega el DataRow para mostrar los datos de cada fila
       cells: [
         // N° de la solicitud
         DataCell(GestureDetector(
@@ -378,7 +378,7 @@ List<DataRow> _buildDataRows() {// Cambiado a List<DataRow> para que coincida co
         )),
         
         // Personal Médico
-        DataCell(GestureDetector(
+        DataCell(GestureDetector(// Se agrega el GestureDetector para detectar el tap
           onTap: () {
             _showOptionsModal(context, item, medicoData, solicitudData != null ? {
               'prioridad': solicitudData['Prioridad'],
@@ -506,7 +506,7 @@ void _showOptionsModal(BuildContext context, dynamic item, Map<String, dynamic>?
 
   DateTime? selectedDate;
 
-  showDialog(
+  showDialog(// Se agrega el showDialog para mostrar el modal de opciones
     context: context,
     builder: (BuildContext context) {
       return AlertDialog(
@@ -519,8 +519,116 @@ void _showOptionsModal(BuildContext context, dynamic item, Map<String, dynamic>?
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
               TextField(controller: comentarioController, decoration: const InputDecoration(labelText: 'Comentario')),
-              TextField(controller: estatusController, decoration: const InputDecoration(labelText: 'Estatus')),
-              TextField(controller: tipoController, decoration: const InputDecoration(labelText: 'Tipo')),
+              
+              // TextField(
+              //   controller: estatusController, 
+              //   decoration: const InputDecoration(labelText: 'Estatus')),
+
+              DropdownButtonFormField<String>(
+                value: estatusController.text,
+                decoration: InputDecoration(
+                  labelText: 'Estatus',
+                  labelStyle: GoogleFonts.comicNeue(fontSize: 16),
+                ),
+                items: [
+                  {
+                    'value': 'Registrada',
+                    'icon': Icons.check_circle,
+                    'color': Colors.green,
+                  },
+                  {
+                    'value': 'Programada',
+                    'icon': Icons.schedule,
+                    'color': Colors.blue,
+                  },
+                  {
+                    'value': 'Cancelada',
+                    'icon': Icons.cancel,
+                    'color': Colors.red,
+                  },
+                  {
+                    'value': 'Reprogramada',
+                    'icon': Icons.refresh,
+                    'color': Colors.orange,
+                  },
+                  {
+                    'value': 'En Proceso',
+                    'icon': Icons.hourglass_empty,
+                    'color': Colors.yellow,
+                  },
+                  {
+                    'value': 'Realizada',
+                    'icon': Icons.done_all,
+                    'color': Colors.purple,
+                  },
+                  {
+                    'value': 'Aprobado',
+                    'icon': Icons.thumb_up,
+                    'color': Colors.teal,
+                  },
+                ].map((item) {
+                  return DropdownMenuItem<String>(
+                    value: item['value'] as String?,
+                    child: Row(
+                      children: [
+                        Icon(item['icon'] as IconData?, color: item['color'] as Color?), // Ícono con color
+                        SizedBox(width: 10),
+                        Text(item['value'] as String, style: GoogleFonts.comicNeue(fontSize: 16)),
+                      ],
+                    ),
+                  );
+                }).toList(),
+                onChanged: (value) => setState(() => estatusController.text = value ?? ''),
+              ),
+
+
+
+
+              // TextField(controller: tipoController, decoration: const InputDecoration(labelText: 'Tipo')),
+
+              DropdownButtonFormField<String>(
+                value: tipoController.text,
+                decoration: InputDecoration(
+                  labelText: 'Tipo',
+                  labelStyle: GoogleFonts.comicNeue(fontSize: 16),
+                ),
+                items: [
+                  {
+                    'value': 'Servicio Interno',
+                    'icon': Icons.local_hospital,
+                    'color': Colors.blue,
+                  },
+                  {
+                    'value': 'Traslados',
+                    'icon': Icons.transfer_within_a_station,
+                    'color': Colors.green,
+                  },
+                  {
+                    'value': 'Subrogado',
+                    'icon': Icons.people,
+                    'color': Colors.orange,
+                  },
+                  {
+                    'value': 'Administrativo',
+                    'icon': Icons.account_balance,
+                    'color': Colors.red,
+                  },
+                ].map((item) {
+                  return DropdownMenuItem<String>(
+                    value: item['value'] as String?,
+                    child: Row(
+                      children: [
+                        Icon(item['icon'] as IconData?, color: item['color'] as Color?), // Icono con color
+                        const SizedBox(width: 10),
+                        Text(item['value'] as String, style: GoogleFonts.comicNeue(fontSize: 16)),
+                      ],
+                    ),
+                  );
+                }).toList(),
+                onChanged: (value) => setState(() => tipoController.text = value ?? ''),
+              ),
+
+
               TextField(
                 controller: fechaRegistroController,
                 decoration: const InputDecoration(labelText: 'Fecha de Registro'),
@@ -651,7 +759,7 @@ Future<void> _updateAprobacion(int id, String comentario, String estatus, String
       );
       if (response.statusCode == 200) {
         fetchAprobaciones(); // Recargar los datos después de la eliminación
-        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Eliminación exitosa')));
+        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Eliminación exitosa')));
       } else {
         throw Exception('Error al eliminar');
       }
@@ -693,7 +801,7 @@ Future<void> _createAprobacion(
 
     if (response.statusCode == 200 || response.statusCode == 201) {
       fetchAprobaciones(); // Recargar los datos después de la creación
-      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Creación exitosa')));
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Creación exitosa')));
     } else {
       throw Exception('Error al crear la aprobación: ${response.statusCode} - ${response.reasonPhrase}');
     }
@@ -771,7 +879,7 @@ Future<void> _createNewAprobacion(
     if (response.statusCode == 200 || response.statusCode == 201) {
       final aprobacionesScreenState = context.findAncestorStateOfType<_AprobacionesScreenState>();
       aprobacionesScreenState?.fetchAprobaciones();
-      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Creación exitosa')));
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Creación exitosa')));
       Navigator.of(context).pop();
     } else {
       throw Exception('Error al crear la aprobación: ${response.statusCode} - ${response.reasonPhrase}');
@@ -796,7 +904,7 @@ void _showCreateAprobacionModal(BuildContext context) {
   int? solicitudSeleccionado;
   
 
-  Future<void> _selectDate(BuildContext context, TextEditingController controller) async {
+  Future<void> selectDate(BuildContext context, TextEditingController controller) async {
     final DateTime? picked = await showDatePicker(
       context: context,
       initialDate: DateTime.now(),
@@ -813,14 +921,14 @@ void _showCreateAprobacionModal(BuildContext context) {
     context: context,
     builder: (BuildContext context) {
       return AlertDialog(
-        title: Text('Crear Aprobación'),
+        title: const Text('Crear Aprobación'),
         content: SingleChildScrollView(
           child: Column(
             children: [
               _buildTextField(controller: comentarioController, label: 'Comentario'),
               DropdownButtonFormField<String>(
                 value: tipoSeleccionado,
-                decoration: InputDecoration(labelText: 'Tipo'),
+                decoration: const InputDecoration(labelText: 'Tipo'),
                 items: tipos.map((String tipo) {
                   return DropdownMenuItem<String>(
                     value: tipo,
@@ -833,7 +941,7 @@ void _showCreateAprobacionModal(BuildContext context) {
               ),
               DropdownButtonFormField<String>(
                 value: estatusSeleccionado,
-                decoration: InputDecoration(labelText: 'Estatus'),
+                decoration: const InputDecoration(labelText: 'Estatus'),
                 items: estatus.map((String estatusItem) {
                   return DropdownMenuItem<String>(
                     value: estatusItem,
@@ -845,30 +953,30 @@ void _showCreateAprobacionModal(BuildContext context) {
                 },
               ),
               GestureDetector(
-                onTap: () => _selectDate(context, fechaRegistroController),
+                onTap: () => selectDate(context, fechaRegistroController),
                 child: AbsorbPointer(
                   child: TextField(
                     controller: fechaRegistroController,
-                    decoration: InputDecoration(labelText: 'Fecha de Registro'),
+                    decoration: const InputDecoration(labelText: 'Fecha de Registro'),
                   ),
                 ),
               ),
               GestureDetector(
-                onTap: () => _selectDate(context, fechaAprobacionController),
+                onTap: () => selectDate(context, fechaAprobacionController),
                 child: AbsorbPointer(
                   child: TextField(
                     controller: fechaAprobacionController,
-                    decoration: InputDecoration(labelText: 'Fecha de Aprobación'),
+                    decoration: const InputDecoration(labelText: 'Fecha de Aprobación'),
                   ),
                 ),
               ),
               DropdownButtonFormField<int>(
                 value: medicoSeleccionado,
-                decoration: InputDecoration(labelText: 'Seleccionar Médico'),
+                decoration: const InputDecoration(labelText: 'Seleccionar Médico'),
                 items: listaMedicos.map((Doctor medico) {
                   return DropdownMenuItem<int>(
                     value: medico.id,
-                    child: Text('${medico.nombre} ${medico.primerApellido} ${medico.segundoApellido}', style: TextStyle(fontSize: 12)),
+                    child: Text('${medico.nombre} ${medico.primerApellido} ${medico.segundoApellido}', style: const TextStyle(fontSize: 12)),
                   );
                 }).toList(),
                 onChanged: (int? nuevoMedico) {
@@ -877,14 +985,14 @@ void _showCreateAprobacionModal(BuildContext context) {
               ),
               DropdownButtonFormField<int>(
                 value: solicitudSeleccionado,
-                decoration: InputDecoration(labelText: 'Prioridad de la Solicitud'),
+                decoration: const InputDecoration(labelText: 'Prioridad de la Solicitud'),
                 items: solicitudesRealizadas.entries.map((entry) {
                   final solicitudId = entry.key;
                   final prioridad = entry.value['Prioridad'] ?? 'Sin Prioridad';  // Extrae la prioridad del JSON recibido
 
                   return DropdownMenuItem<int>(
                     value: solicitudId,
-                    child: Text('ID: $solicitudId - Prioridad: $prioridad', style: TextStyle(fontSize: 12)),
+                    child: Text('ID: $solicitudId - Prioridad: $prioridad', style: const TextStyle(fontSize: 12)),
                   );
                 }).toList(),
                 onChanged: (int? nuevaSolicitud) {
@@ -905,7 +1013,7 @@ void _showCreateAprobacionModal(BuildContext context) {
             onPressed: () {
               Navigator.of(context).pop();
             },
-            child: Text('Cancelar'),
+            child: const Text('Cancelar'),
           ),
           TextButton(
             onPressed: () {
@@ -919,7 +1027,7 @@ void _showCreateAprobacionModal(BuildContext context) {
                 )
                 
                  {
-              ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Por favor, complete todos los campos.')));
+              ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Por favor, complete todos los campos.')));
               return;
             }
 
@@ -934,7 +1042,7 @@ void _showCreateAprobacionModal(BuildContext context) {
                 solicitudSeleccionado!,
               );
             },
-            child: Text('Crear Aprobación'),
+            child: const Text('Crear Aprobación'),
           ),
         ],
       );

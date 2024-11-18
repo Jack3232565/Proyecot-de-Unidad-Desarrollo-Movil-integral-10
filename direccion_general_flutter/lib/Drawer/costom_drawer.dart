@@ -14,12 +14,12 @@ class CustomDrawer extends StatelessWidget {
   final Function logout;
 
   const CustomDrawer({
-    Key? key,
+    super.key,
     required this.userDataFuture,
     required this.area,
     required this.personaId,
     required this.logout,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -31,18 +31,18 @@ class CustomDrawer extends StatelessWidget {
           builder: (context, snapshot) {
             if (snapshot.connectionState == ConnectionState.waiting) {
               return const DrawerHeader(
-                child: Center(child: CircularProgressIndicator()),
                 decoration: BoxDecoration(color: Colors.blue),
+                child: Center(child: CircularProgressIndicator()),
               );
             } else if (snapshot.hasError) {
               return const DrawerHeader(
-                child: Center(child: Text("Error al cargar datos del usuario")),
                 decoration: BoxDecoration(color: Colors.blue),
+                child: Center(child: Text("Error al cargar datos del usuario")),
               );
             } else if (!snapshot.hasData || snapshot.data == null) {
               return const DrawerHeader(
-                child: Center(child: Text("No se encontró información del usuario")),
                 decoration: BoxDecoration(color: Colors.blue),
+                child: Center(child: Text("No se encontró información del usuario")),
               );
             } else {
               final userData = snapshot.data!;

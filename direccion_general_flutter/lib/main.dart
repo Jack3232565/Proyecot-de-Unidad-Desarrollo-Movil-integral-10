@@ -23,7 +23,7 @@ class HospitalApp extends StatelessWidget {
       routes: {
         '/': (context) => const SplashScreen(), // SplashScreen como ruta inicial
         '/login': (context) => const LoginScreen(), // Ruta para la pantalla de login
-        '/home': (context) => HomeScreen(area: '', personaId: 0,), // Ruta para la pantalla principal
+        '/home': (context) => const HomeScreen(area: '', personaId: 0,), // Ruta para la pantalla principal
       },
     );
   }
