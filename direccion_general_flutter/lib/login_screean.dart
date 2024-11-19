@@ -1,3 +1,4 @@
+import 'package:direccion_general_flutter/oauth/google.dart';
 import 'package:direccion_general_flutter/register_screean.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -93,15 +94,7 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 
 
-//---------------------------------------------------------------------------------------------------------------------
-    // Función para manejar la autenticación con Google
-  void _handleGoogleSignIn() {
-    // Aquí iría la lógica para autenticación con Google
-    Navigator.pushReplacement(
-      context,
-      MaterialPageRoute(builder: (context) => HomeScreen(area: _selectedArea ?? 'Área no seleccionada', personaId: 0)),
-    );
-  }
+
 
 
   // Función para manejar la autenticación con Facebook
@@ -238,7 +231,12 @@ class _LoginScreenState extends State<LoginScreen> {
                   children: [
                     // Botón para iniciar sesión con Google
                     ElevatedButton.icon(
-                      onPressed: _handleGoogleSignIn,
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => const GoogleScreen()),
+                        );
+                      },
                       icon: Image.asset(
                         'assets/icono_google.png',
                         height: 24.0,
@@ -272,11 +270,6 @@ class _LoginScreenState extends State<LoginScreen> {
 
                   ],
                 ),
-
-                
-
-
-
               ],
             ),
           ),

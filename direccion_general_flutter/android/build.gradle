@@ -1,14 +1,28 @@
+buildscript {
+    repositories {
+        google()  // Repositorio de Google
+        mavenCentral()  // Repositorio Maven Central
+    }
+    dependencies {
+        // Asegúrate de usar una versión compatible con tu proyecto
+        classpath 'com.android.tools.build:gradle:8.1.0'  // Plugin de Gradle para Android
+        classpath 'com.google.gms:google-services:4.3.15'  // Plugin de servicios de Google
+    }
+}
+
 allprojects {
     repositories {
-        google()
-        mavenCentral()
+        google()  // Repositorio de Google para otros proyectos
+        mavenCentral()  // Repositorio Maven
     }
 }
 
 rootProject.buildDir = "../build"
+
 subprojects {
     project.buildDir = "${rootProject.buildDir}/${project.name}"
 }
+
 subprojects {
     project.evaluationDependsOn(":app")
 }

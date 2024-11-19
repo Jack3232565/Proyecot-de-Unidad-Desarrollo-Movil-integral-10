@@ -1,0 +1,29 @@
+{
+    // Use IntelliSense para saber los atributos posibles.
+    // Mantenga el puntero para ver las descripciones de los existentes atributos.
+    // Para más información, visite: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "direccion_general_flutter",
+            "cwd": "direccion_general_flutter",
+            "request": "launch",
+            "type": "dart",
+            "args": ["--web-port", "8080"]
+        },
+        {
+            "name": "direccion_general_flutter (profile mode)",
+            "cwd": "direccion_general_flutter",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "direccion_general_flutter (release mode)",
+            "cwd": "direccion_general_flutter",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}
