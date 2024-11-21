@@ -1,5 +1,6 @@
 import 'package:direccion_general_flutter/Drawer/google_costom_drawer.dart';
 import 'package:direccion_general_flutter/View/aprobacionesSM.dart';
+import 'package:direccion_general_flutter/View/aprobacionesSM2.dart';
 import 'package:direccion_general_flutter/login_screean.dart';
 import 'package:direccion_general_flutter/oauth/google.dart';
 import 'package:google_sign_in/google_sign_in.dart';
@@ -119,9 +120,9 @@ class HomeScreen2 extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => AprobacionesScreen(
+                            builder: (context) => AprobacionesScreen2(
                               area: area, // Pasa el área actual si es necesario
-                              personaId: 0, // Pasa el ID de persona si es necesario
+                              user: user, // Pasa el usuario actual
                             ),
                           ),
                         );
