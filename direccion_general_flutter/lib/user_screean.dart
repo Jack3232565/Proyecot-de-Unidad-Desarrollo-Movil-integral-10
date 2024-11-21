@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class UserScreen extends StatefulWidget {
+  const UserScreen({super.key});
+
   @override
   _UserScreenState createState() => _UserScreenState();
 }
@@ -82,12 +84,12 @@ class _UserScreenState extends State<UserScreen> {
         resetForm();
 
         // Esperamos 2 segundos antes de redirigir a la pantalla de login
-        await Future.delayed(Duration(seconds: 3));
+        await Future.delayed(const Duration(seconds: 3));
 
         // Redirigir a la pantalla de Login
         Navigator.pushReplacement(
           context,
-          MaterialPageRoute(builder: (context) => LoginScreen()),
+          MaterialPageRoute(builder: (context) => const LoginScreen()),
         );
       } else {
         // Si la respuesta no es exitosa, intenta manejarla
@@ -184,43 +186,43 @@ class _UserScreenState extends State<UserScreen> {
           children: [
             TextField(
               onChanged: (value) => username = value,
-              decoration: InputDecoration(labelText: 'Usuario'),
+              decoration: const InputDecoration(labelText: 'Usuario'),
             ),
             TextField(
               onChanged: (value) => email = value,
-              decoration: InputDecoration(labelText: 'Correo Electrónico'),
+              decoration: const InputDecoration(labelText: 'Correo Electrónico'),
               keyboardType: TextInputType.emailAddress,
             ),
             TextField(
               onChanged: (value) => phoneNumber = value,
-              decoration: InputDecoration(labelText: 'Número Telefónico Móvil'),
+              decoration: const InputDecoration(labelText: 'Número Telefónico Móvil'),
               keyboardType: TextInputType.phone,
             ),
             TextField(
               onChanged: (value) => password = value,
-              decoration: InputDecoration(labelText: 'Contraseña'),
+              decoration: const InputDecoration(labelText: 'Contraseña'),
               obscureText: true,
             ),
             TextField(
               onChanged: (value) => repeatPassword = value,
-              decoration: InputDecoration(labelText: 'Repetir Contraseña'),
+              decoration: const InputDecoration(labelText: 'Repetir Contraseña'),
               obscureText: true,
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             ElevatedButton(
               onPressed: registerUser,
-              child: Text('Registrar Usuario'),
+              child: const Text('Registrar Usuario'),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             if (successMessage.isNotEmpty)
               Text(
                 successMessage,
-                style: TextStyle(color: Colors.green),
+                style: const TextStyle(color: Colors.green),
               ),
             if (errorMessage.isNotEmpty)
               Text(
                 errorMessage,
-                style: TextStyle(color: Colors.red),
+                style: const TextStyle(color: Colors.red),
               ),
           ],
         ),

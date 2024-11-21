@@ -93,6 +93,8 @@ class CustomDrawer extends StatelessWidget {
                   ],
                 ),
               );
+
+
             }
           },
         ),
@@ -180,8 +182,22 @@ class CustomDrawer extends StatelessWidget {
             logout();
           },
         ),
+              Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    'Dirección General © 2024',
+                    style: GoogleFonts.comicNeue(
+                      fontSize: 12,
+                      color: const Color.fromARGB(255, 15, 12, 12),
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+
       ],
+      
     );
+    
   }
 }
 

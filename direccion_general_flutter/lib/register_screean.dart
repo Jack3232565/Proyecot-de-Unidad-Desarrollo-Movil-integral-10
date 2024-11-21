@@ -309,8 +309,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                               child: Row(
                                 mainAxisSize: MainAxisSize.min, // Ajusta el tamaño del contenido
                                 children: [
-                                  Icon(Icons.camera_alt, size: 18, color: Colors.white), // Ícono de cámara
-                                  SizedBox(width: 8), // Espacio entre ícono y texto
+                                  const Icon(Icons.camera_alt, size: 18, color: Colors.white), // Ícono de cámara
+                                  const SizedBox(width: 8), // Espacio entre ícono y texto
                                   Text(
                                     'Tomar Foto',
                                     style: GoogleFonts.comicNeue(fontSize: 16), // Estilo de texto
@@ -326,7 +326,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: const Color.fromARGB(255, 12, 76, 128),
                                 foregroundColor: Colors.white,
-                                padding: EdgeInsets.symmetric(horizontal: 12, vertical: 7), // Tamaño del botón
+                                padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 7), // Tamaño del botón
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(12), // Bordes redondeados
                                 ),
@@ -336,8 +336,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                               child: Row(
                                 mainAxisSize: MainAxisSize.min, // Ajusta el tamaño del contenido
                                 children: [
-                                  Icon(Icons.image, size: 18, color: Colors.white), // Ícono de imagen
-                                  SizedBox(width: 8), // Espacio entre ícono y texto
+                                  const Icon(Icons.image, size: 18, color: Colors.white), // Ícono de imagen
+                                  const SizedBox(width: 8), // Espacio entre ícono y texto
                                   Text(
                                     'Seleccionar Imagen',
                                     style: GoogleFonts.comicNeue(fontSize: 16),

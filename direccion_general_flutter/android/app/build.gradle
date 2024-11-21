@@ -25,20 +25,32 @@ android {
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName
-        multiDexEnabled true
+        multiDexEnabled true  // Activar MultiDex
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file("debug.keystore")  // Firma predeterminada para debug
+        }
     }
 
     buildTypes {
         release {
-            signingConfig signingConfigs.debug
+            signingConfig signingConfigs.debug  // Utiliza la firma debug si no tienes una personalizada
         }
     }
 }
 
 dependencies {
-    implementation 'com.google.android.gms:play-services-auth:20.7.0'  // Google Sign-In
-    implementation 'androidx.multidex:multidex:2.0.1'  // Para manejo de múltiples dependencias
-    implementation 'com.google.firebase:firebase-auth' // Firebase Authentication
+    // Google Sign-In
+    implementation 'com.google.android.gms:play-services-auth:20.7.0'
+
+    // MultiDex para manejar grandes dependencias
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+    // Firebase Authentication
+    implementation platform('com.google.firebase:firebase-bom:32.2.2')  // Última versión
+    implementation 'com.google.firebase:firebase-auth'
 }
 
 apply plugin: 'com.google.gms.google-services'  // Aplicar el plugin de Google Services
