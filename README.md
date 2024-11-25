@@ -262,7 +262,7 @@ https://www.figma.com/design/0t2dq3pWZYl7BOSUw25aC8/Dise%C3%B1o-Propuesto-Direcc
 
 ## Requerimientos Funcionales
 
-Los requerimientos Funcionales son una parte esencial del proyecto, de ellos dependerá como el sistema debe funcionar de acuerdo a la configuración y distribución del entorno web, siguiendo el patrón antes mencionado en la propuesta anterior mente mencionado se explicarán alguna funciones esenciales en el maquetado web.
+Los requerimientos Funcionales son una parte esencial del proyecto, de ellos dependerá como el sistema debe funcionar de acuerdo a la configuración y distribución del entorno de la app, siguiendo el patrón antes mencionado en la propuesta anterior mente mencionado se explicarán alguna funciones esenciales en el maquetado de la pp.
 
 **![RF](img/Requerimeintos%20Funcionales.png)** 
 
@@ -275,7 +275,7 @@ Este tipo de requerimientos es lo que el usuario no puede visualizar, sin embarg
 
 ## Reglas de Negocio 
 
-1.	Para crear nuevas tablas dentro del sitio web solo se podrán realizar dentro del Framework de desarrollo en Django, esto permitirá que en cada migración la estructura diseñada para el manejo de los datos se respete y no provoque problemas en la compilación de la información.
+1.	Para crear nuevas tablas dentro de la app solo se podrán realizar dentro del Framework de desarrollo en Django, esto permitirá que en cada migración la estructura diseñada para el manejo de los datos se respete y no provoque problemas en la compilación de la información.
 
 2.	El usuario con las credenciales de acceso permitidas podrá ingresar dentro del entorno de MySQL, teniendo los privilegios de consulta, actualización y eliminación de la información, sin embargo, los cambios que realice en la estructura de las tablas no se guardarán debido a que la estructura esta configurada desde Django por lo que en cada migración restaurará la estructura de los modelos que se han establecido.  
 
@@ -293,7 +293,7 @@ Este tipo de requerimientos es lo que el usuario no puede visualizar, sin embarg
 
 9.	Cada cambio en la maquetación y codificación en el desarrollo del proyecto debe ser comentado de manera escrita y respaldado en copias de seguridad, esto permitirá corregir errores en la operación de los servicios y módulos conectados, el versionamiento de cada proceso es importante registrando a los involucrados en el desarrollo.
 
-10.	  Al igual que con las tablas el buscador principal que se planteó para el menú de inicio debe de relacionar la búsqueda especifica en todo el sitio web por lo que su configuración debe de obedecer a la integración de todos los módulos que se integran en el Body del HTML, esta configuración script debe de integrarse en todas las vistas donde aparezca el menú principal. 
+10.	  Al igual que con las tablas el buscador principal que se planteó para el menú de inicio debe de relacionar la búsqueda especifica en todo el sitio de la app por lo que su configuración debe de obedecer a la integración de todos los módulos que se integran en el Body del HTML, esta configuración script debe de integrarse en todas las vistas donde aparezca el menú principal. 
 
 
 
