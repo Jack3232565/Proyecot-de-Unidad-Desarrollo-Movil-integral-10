@@ -253,6 +253,13 @@ https://www.figma.com/design/gF8AeYmdnw069B9mE2CLlO/Wireframe-Direccion-General-
 https://www.figma.com/design/0t2dq3pWZYl7BOSUw25aC8/Dise%C3%B1o-Propuesto-Direcci%C3%B3n-General?node-id=0-1&node-type=canvas|
 
 
+## Visualizacion de Emulador 
+
+| **Emulación** | **Enlace o Previo** |
+| - | - |
+| **Enlace al emulador** | [Ver Emulación Previa](https://appetize.io/embed/b_62fyvngi67iamfjpgjp7uaojgi) |
+| **Vista previa** | [![Vista Previa](img/Pantalla.png)](https://www.youtube.com/shorts/HFt6zeJAAu4) |
+
 
 ## Requerimientos Funcionales
 
@@ -290,15 +297,11 @@ Este tipo de requerimientos es lo que el usuario no puede visualizar, sin embarg
 10.	  Al igual que con las tablas el buscador principal que se planteó para el menú de inicio debe de relacionar la búsqueda especifica en todo el sitio web por lo que su configuración debe de obedecer a la integración de todos los módulos que se integran en el Body del HTML, esta configuración script debe de integrarse en todas las vistas donde aparezca el menú principal. 
 
 
-## Visualizacion de Emulador 
 
- [Emulacion del Proyecto](https://appetize.io/embed/b_mmlxc24a5ll5x7tvcixmdqewwm)
-
- <iframe src="https://appetize.io/embed/b_mmlxc24a5ll5x7tvcixmdqewwm" width="320" height="480" frameborder="0"></iframe>
 
 
 
 ## Documentación Completa
 
-**![Doc](img/documentacion.png)**[Documentacion](/Documentacion/) 
+**![Doc](img/documentacion.png)**[Documentacion](Documents/) 
 
