@@ -290,6 +290,11 @@ Este tipo de requerimientos es lo que el usuario no puede visualizar, sin embarg
 10.	  Al igual que con las tablas el buscador principal que se planteó para el menú de inicio debe de relacionar la búsqueda especifica en todo el sitio web por lo que su configuración debe de obedecer a la integración de todos los módulos que se integran en el Body del HTML, esta configuración script debe de integrarse en todas las vistas donde aparezca el menú principal. 
 
 
+## Visualizacion de Emulador 
+
+ [Emulacion del Proyecto](https://appetize.io/embed/b_mmlxc24a5ll5x7tvcixmdqewwm)
+
+ <iframe src="https://appetize.io/embed/b_mmlxc24a5ll5x7tvcixmdqewwm" width="320" height="480" frameborder="0"></iframe>
 
 
 
