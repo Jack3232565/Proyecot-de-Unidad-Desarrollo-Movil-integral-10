@@ -259,6 +259,13 @@ https://www.figma.com/design/gF8AeYmdnw069B9mE2CLlO/Wireframe-Direccion-General-
 https://www.figma.com/design/0t2dq3pWZYl7BOSUw25aC8/Dise%C3%B1o-Propuesto-Direcci%C3%B3n-General?node-id=0-1&node-type=canvas|
 
 
+## Visualizacion de Emulador 
+
+| **Emulación** | **Enlace o Previo** |
+| - | - |
+| **Enlace al emulador** | [Ver Emulación Previa](https://appetize.io/embed/b_62fyvngi67iamfjpgjp7uaojgi) |
+| **Vista previa** | [![Vista Previa](img/Pantalla.png)](https://www.youtube.com/shorts/HFt6zeJAAu4) |
+
 
 ## Requerimientos Funcionales
 
@@ -299,7 +306,8 @@ Este tipo de requerimientos es lo que el usuario no puede visualizar, sin embarg
 
 
 
+
 ## Documentación Completa
 
-**![Doc](img/documentacion.png)**[Documentacion](/Documentacion/) 
+**![Doc](img/documentacion.png)**[Documentacion](Documents/) 
 

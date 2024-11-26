@@ -39,3 +39,37 @@ git fetch origin
 -- Para Homologara los cambios de la rama main con la rama con la que se esta trabajando
 
 git merge origin/main
+
+
+----------------------------------------------------------------------------------------------
+Los certificados gnerados con ./gladlew signingReport 
+deben de conincidir con los de FireBase 
+https://console.firebase.google.com/project/hospitaldg-7637f/settings/general/android:com.example.direccion_general_flutter?scrollToApps=
+
+
+y el archivo 
+
+google-services.json del proyecto que se descarga del link anterior, y se coloca en andorid/app
+
+
+ Certificados de la aplicacion
+
+PS C:\Users\piano\OneDrive\Escritorio\Desarrollo Movil Integral\Proyecto\Proyecot-de-Unidad-Desarrollo-Movil-integral-10\direccion_general_flutter\android> ./gradlew signingReport
+Starting a Gradle Daemon, 2 incompatible and 3 stopped Daemons could not be reused, use --status for details
+
+> Task :app:signingReport
+Variant: debug
+Config: debug
+Store: C:\Users\piano\OneDrive\Escritorio\Desarrollo Movil Integral\Proyecto\Proyecot-de-Unidad-Desarrollo-Movil-integral-10\direccion_general_flutter\android\app\debug.keystore
+Alias: AndroidDebugKey
+MD5: 43:43:E1:6D:0A:62:13:90:B3:0C:89:53:66:36:B0:0E
+SHA1: F2:F0:4D:95:D3:9A:82:3C:D1:04:20:8A:37:38:F6:5B:D7:2F:B7:BA
+SHA-256: 4A:B5:98:49:D6:34:AE:A1:C2:D6:C2:4A:5D:B2:49:01:B7:0C:4A:49:9C:9E:F0:D2:43:83:27:71:9D:47:CC:EA
+Valid until: domingo, 7 de abril de 2052
+
+---------------------------------------------------------------------------------------------
+
+-- Para poder loger a un usuario por Oaut con Google hay que agegarlo a la lista de usuarios de prueba 
+dentro de la consola de Google Cloud 
+
+https://console.cloud.google.com/apis/credentials/consent?hl=es&project=hospital-oauth
