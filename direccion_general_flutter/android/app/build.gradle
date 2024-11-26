@@ -1,0 +1,56 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    id "dev.flutter.flutter-gradle-plugin"
+    id 'com.google.gms.google-services'  // Asegúrate de aplicar el plugin aquí
+}
+
+android {
+    namespace = "com.example.direccion_general_flutter"
+    compileSdk = flutter.compileSdkVersion
+    ndkVersion = flutter.ndkVersion
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        applicationId = "com.example.direccion_general_flutter"
+        minSdk = flutter.minSdkVersion
+        targetSdk = flutter.targetSdkVersion
+        versionCode = flutter.versionCode
+        versionName = flutter.versionName
+        multiDexEnabled true  // Activar MultiDex
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file("debug.keystore")  // Firma predeterminada para debug
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.debug  // Utiliza la firma debug si no tienes una personalizada
+        }
+    }
+}
+
+dependencies {
+    // Google Sign-In
+    implementation 'com.google.android.gms:play-services-auth:20.7.0'
+
+    // MultiDex para manejar grandes dependencias
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+    // Firebase Authentication
+    implementation platform('com.google.firebase:firebase-bom:32.2.2')  // Última versión
+    implementation 'com.google.firebase:firebase-auth'
+}
+
+apply plugin: 'com.google.gms.google-services'  // Aplicar el plugin de Google Services

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "510929384792",
+    "project_id": "hospitaldg-7637f",
+    "storage_bucket": "hospitaldg-7637f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:510929384792:android:9eb19082a8880482b3e12d",
+        "android_client_info": {
+          "package_name": "com.example.direccion_general_flutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "510929384792-m0u9k65n8ennl1vcah7e1j2sfef25b4k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.direccion_general_flutter",
+            "certificate_hash": "f2f04d95d39a823cd104208a3738f65bd72fb7ba"
+          }
+        },
+        {
+          "client_id": "510929384792-oql3avrc130ndcbvinfdd5bhm21fqsv7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAznGaPFbHlDwzLgfeW-6arcdFVploNSZg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "510929384792-oql3avrc130ndcbvinfdd5bhm21fqsv7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

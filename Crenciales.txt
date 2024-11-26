@@ -1,0 +1,64 @@
+PS C:\Users\piano> keytool -genkeypair -v -keystore "C:\Users\piano\OneDrive\Escritorio\Desarrollo Movil Integral\Proyecto\Proyecot-de-Unidad-Desarrollo-Movil-integral-10\direccion_general_flutter\android\app\debug.keystore" -keyalg RSA -keysize 2048 -validity 10000 -alias android
+Enter keystore password:
+
+Re-enter new password:
+
+What is your first and last name?
+  [Unknown]:  Carlos
+What is the name of your organizational unit?
+  [Unknown]:  Jaguar
+What is the name of your organization?
+  [Unknown]:  JaguarCorporation
+What is the name of your City or Locality?
+  [Unknown]:  Mex
+What is the name of your State or Province?
+  [Unknown]:  Pue
+What is the two-letter country code for this unit?
+  [Unknown]:  55070
+Is CN=Carlos, OU=Jaguar, O=JaguarCorporation, L=Mex, ST=Pue, C=55070 correct?
+  [no]:  Y
+
+Generating 2,048 bit RSA key pair and self-signed certificate (SHA256withRSA) with a validity of 10,000 days
+        for: CN=Carlos, OU=Jaguar, O=JaguarCorporation, L=Mex, ST=Pue, C=55070
+[Storing C:\Users\piano\OneDrive\Escritorio\Desarrollo Movil Integral\Proyecto\Proyecot-de-Unidad-Desarrollo-Movil-integral-10\direccion_general_flutter\android\app\debug.keystore]
+PS C:\Users\piano> keytool -list -v -keystore "C:\Users\piano\OneDrive\Escritorio\Desarrollo Movil Integral\Proyecto\Proyecot-de-Unidad-Desarrollo-Movil-integral-10\direccion_general_flutter\android\app\debug.keystore"
+Enter keystore password:
+
+Keystore type: PKCS12
+Keystore provider: SUN
+
+Your keystore contains 1 entry
+
+Alias name: android
+Creation date: 19 nov 2024
+Entry type: PrivateKeyEntry
+Certificate chain length: 1
+Certificate[1]:
+Owner: CN=Carlos, OU=Jaguar, O=JaguarCorporation, L=Mex, ST=Pue, C=55070
+Issuer: CN=Carlos, OU=Jaguar, O=JaguarCorporation, L=Mex, ST=Pue, C=55070
+Serial number: 61332b3f
+Valid from: Tue Nov 19 00:39:33 CST 2024 until: Sat Apr 06 00:39:33 CST 2052
+Certificate fingerprints:
+         SHA1: D5:96:73:21:AF:37:54:A2:1F:88:14:6A:DD:8F:5A:4D:BB:06:CA:4F
+         SHA256: C2:85:08:DD:D1:2C:2C:64:F6:0E:F1:0C:79:AC:CE:C0:88:21:77:C6:08:32:87:61:7E:B5:BC:3A:89:FF:A1:15
+Signature algorithm name: SHA256withRSA
+Subject Public Key Algorithm: 2048-bit RSA key
+Version: 3
+
+Extensions:
+
+#1: ObjectId: 2.5.29.14 Criticality=false
+SubjectKeyIdentifier [
+KeyIdentifier [
+0000: A1 8B 46 D7 8D 56 40 7F   E4 27 5B 63 06 64 2A B6  ..F..V@..'[c.d*.
+0010: BF 1A 1E 76                                        ...v
+]
+]
+
+
+
+*******************************************
+*******************************************
+
+
+PS C:\Users\piano>
