@@ -1,4 +1,3 @@
-import 'dart:ffi';
 import 'dart:io'; // Para detectar si es Android o iOS
 import 'package:flutter/foundation.dart'; // Para detectar si es web
 import 'package:flutter/material.dart';

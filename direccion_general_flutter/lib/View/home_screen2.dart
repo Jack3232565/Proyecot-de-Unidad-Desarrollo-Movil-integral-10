@@ -107,7 +107,7 @@ class HomeScreen2 extends StatelessWidget {
           ),
           const SizedBox(height: 15),
           Text(
-          'Área: ${area}',// se imprime el area seleccionada por el usuario
+          'Área: $area',// se imprime el area seleccionada por el usuario
             style: GoogleFonts.comicNeue(fontSize: 12, fontWeight: FontWeight.bold,  ),
           ),
 

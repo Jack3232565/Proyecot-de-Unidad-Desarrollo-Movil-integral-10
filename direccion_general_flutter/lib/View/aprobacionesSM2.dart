@@ -580,7 +580,7 @@ void _showOptionsModal(BuildContext context, dynamic item, Map<String, dynamic>?
                     child: Row(
                       children: [
                         Icon(item['icon'] as IconData?, color: item['color'] as Color?), // Ícono con color
-                        SizedBox(width: 10),
+                        const SizedBox(width: 10),
                         Text(item['value'] as String, style: GoogleFonts.comicNeue(fontSize: 16)),
                       ],
                     ),

@@ -13,8 +13,8 @@ git pull origin main
 git merge Carlos-Crespo
 
 -- Realiza el commit de la fusión (si no lo ha hecho automáticamente): 
-
 git commit -m "Fusionando la rama Carlos-Crespo en main"
+
 
 -- Elimina la rama Carlos-Crespo: Primero, elimina la rama local.
 
