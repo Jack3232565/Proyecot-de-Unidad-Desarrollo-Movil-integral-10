@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">DGHospital</string>
+    <string name="facebook_app_id">540772432278690</string>
+    <string name="fb_login_protocol_scheme">fb540772432278690</string>
+    <string name="facebook_client_token">9658b2a4124741d3783a026ad4340b7b</string>
+</resources>

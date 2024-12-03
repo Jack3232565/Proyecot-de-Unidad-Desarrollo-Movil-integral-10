@@ -351,7 +351,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 ],
               ),
 
-
               const SizedBox(height: 16.0),
               ElevatedButton(
                 onPressed: registerPerson, // Llamar a la función de registro

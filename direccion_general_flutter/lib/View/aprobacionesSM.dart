@@ -7,7 +7,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 import 'package:intl/intl.dart' as intl;
-
 import 'package:direccion_general_flutter/Drawer/costom_drawer.dart';
 
 // ------------ Extraccion de datos de los medicos -----------------
@@ -60,9 +59,6 @@ class Solicitud {
 }
 //-----------------------------------------------------------
 
-
-
-
 class AprobacionesScreen extends StatefulWidget {
   final String area;
   final int personaId;
@@ -77,13 +73,13 @@ class _AprobacionesScreenState extends State<AprobacionesScreen> {
   
   late Future<Map<String, dynamic>> userDataFuture; // Cambiado a late para inicializar en initState
   List<dynamic> aprobaciones = [];// Cambiado a List<dynamic> para que coincida con el tipo de retorno
-  Map<int, Map<String, dynamic>> personalMedicoData = {};// Cambiado a Map<int, Map<String, dynamic>> para que coincida con el tipo de retorno
+  Map<int, Map<String, dynamic>> personalMedicoData = {};
+  // Cambiado a Map<int, Map<String, dynamic>> para que coincida con el tipo de retorno
 
   List<Doctor> listaMedicos = [];  // Cambiado a List<Doctor> para que coincida con el tipo de retorno
 
   Map<int, Map<String, dynamic>> solicitudesRealizadas = {};  // Cambiado a map de tipo Solicitud
 
-  
 
 @override
 void initState() {
@@ -133,9 +129,6 @@ void initState() {
     }
   }
 
-
-
-
   Future<void> fetchPersonalMedicoData() async {
     try {
       final response = await http.get(
@@ -162,7 +155,6 @@ void initState() {
     }
   }
 
-
 //------------------------------------------------------------------------
 //Estraccion de los datos de los medicos
 
@@ -181,8 +173,6 @@ Future<List<Doctor>> fetchDoctors() async {
     throw Exception('Error fetching doctors: $e');
   }
 }
-
-
 //------------------------------------------------------------------------
 //Estraccion de los datos de las solicitudes
   // Función para obtener las solicitudes
@@ -220,12 +210,7 @@ Future<void> fetchSolicitudes() async {
     print('Error en la respuesta: ${response.statusCode}');
   }
 }
-
-
-
-
-
-
+// ------------------------------------------------
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -317,9 +302,6 @@ Widget _buildSolicitudesTable() {
     ),
   );
 }
-
-
-
 
 
 List<DataRow> _buildDataRows() {// Cambiado a List<DataRow> para que coincida con el tipo de retorno
@@ -486,10 +468,6 @@ List<DataRow> _buildDataRows() {// Cambiado a List<DataRow> para que coincida co
     );
   }).toList();
 }
-
-
-
-
 
 // Función para mostrar el modal de opciones
 void _showOptionsModal(BuildContext context, dynamic item, Map<String, dynamic>? medicoData, Map<String, dynamic>? solicitudData) {
@@ -724,7 +702,6 @@ void _showDeleteConfirmation(BuildContext context, int id) {
 }
 
 
-
 Future<void> _updateAprobacion(int id, String comentario, String estatus, String tipo, String fechaRegistro, String fechaAprobacion, int personalMedicoId, int solicitudId) async {
   try {
     final response = await http.put(
@@ -752,7 +729,7 @@ Future<void> _updateAprobacion(int id, String comentario, String estatus, String
   }
 }
 
-  Future<void> _deleteAprobacion(int id) async {
+Future<void> _deleteAprobacion(int id) async {
     try {
       final response = await http.delete(
         Uri.parse('https://back-end-hospital2-0.onrender.com/tbb_aprobaciones/$id'),
@@ -767,7 +744,6 @@ Future<void> _updateAprobacion(int id, String comentario, String estatus, String
       print('Error: $e');
     }
   }
-
 
 //------------------Creacion del la Aprobación-------------------------------------------------------------------------------------------
 
@@ -812,12 +788,6 @@ Future<void> _createAprobacion(
     );
   }
 }
-
-
-
-
-
-
 
 //--------------------------------------------------------------------------------------------------
 // Opciones para el campo Tipo

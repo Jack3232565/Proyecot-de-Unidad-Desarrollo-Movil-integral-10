@@ -4,7 +4,7 @@ import 'package:intl/date_symbol_data_local.dart'; // Importa intl para iniciali
 import 'View/home_screen.dart';
 import 'splash_screen.dart';
 
-void main() async {
+void main() async { // Se inicializa la aplicación con Run App
   WidgetsFlutterBinding.ensureInitialized(); // Asegúrate de que los widgets estén inicializados
   await initializeDateFormatting('es_ES', null); // Inicializa el formato de fecha para español
   runApp(const HospitalApp());

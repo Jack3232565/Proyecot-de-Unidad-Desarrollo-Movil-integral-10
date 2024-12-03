@@ -1,3 +1,4 @@
+import 'package:direccion_general_flutter/oauth/facebook.dart';
 import 'package:direccion_general_flutter/oauth/google.dart';
 import 'package:direccion_general_flutter/register_screean.dart';
 import 'package:flutter/material.dart';
@@ -95,18 +96,15 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 
 
-
-
-
   // Función para manejar la autenticación con Facebook
       // Función para manejar la autenticación con Google
-  void _handleFacebookSignIn() {
-    // Aquí iría la lógica para autenticación con Google
-    Navigator.pushReplacement(
-      context,
-      MaterialPageRoute(builder: (context) => HomeScreen(area: _selectedArea ?? 'Área no seleccionada', personaId: 0)),
-    );
-  }
+  // void _handleFacebookSignIn() {
+  //   // Aquí iría la lógica para autenticación con Google
+  //   Navigator.pushReplacement(
+  //     context,
+  //     MaterialPageRoute(builder: (context) => HomeScreen(area: _selectedArea ?? 'Área no seleccionada', personaId: 0)),
+  //   );
+  // }
 
 //----------------------------------------------------------------------------
   @override
@@ -255,7 +253,12 @@ class _LoginScreenState extends State<LoginScreen> {
 
                     // Botón para iniciar sesión con Facebook
                     ElevatedButton.icon(
-                      onPressed: _handleFacebookSignIn,
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => const FacebookScreen()),
+                        );
+                      },
                       icon: Image.asset(
                         'assets/icono_facebook.png',
                         height: 24.0,

@@ -174,7 +174,7 @@ class CustomDrawer extends StatelessWidget {
               },
             ),
         // Agrega más ListTile como en tu ejemplo
-        ListTile(
+            ListTile(
           leading: const Icon(Icons.logout),
           title: Text('Salir', style: GoogleFonts.comicNeue(fontSize: 16)),
           onTap: () {
@@ -211,8 +211,8 @@ Future<Map<String, dynamic>> fetchUserData(int personaId) async {
     );
 
     // Verifica el estado de las respuestas
-    print('Usuario Response Status: ${usuarioResponse.statusCode}');
-    print('Persona Response Status: ${personaResponse.statusCode}');
+    // print('Usuario Response Status: ${usuarioResponse.statusCode}');
+    // print('Persona Response Status: ${personaResponse.statusCode}');
 
     if (usuarioResponse.statusCode == 200 && personaResponse.statusCode == 200) {
       final List<dynamic> usuarios = jsonDecode(usuarioResponse.body);
@@ -237,7 +237,7 @@ Future<Map<String, dynamic>> fetchUserData(int personaId) async {
     throw Exception("Failed to load user data");
   } catch (e) {
     // Manejo de excepciones
-    print("Error fetching user data: $e");
+    // print("Error fetching user data: $e");
     throw Exception("Error fetching user data");
   }
 }
