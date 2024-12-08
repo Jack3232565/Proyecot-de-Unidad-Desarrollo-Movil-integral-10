@@ -9,11 +9,11 @@ class CustomDrawer3 extends StatelessWidget {
   final Future<void> Function() logout;
 
   const CustomDrawer3({
-    Key? key,
+    super.key,
     required this.area,
     required this.user,
     required this.logout,
-  }): super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +46,7 @@ class CustomDrawer3 extends StatelessWidget {
                       ClipRRect(
                               borderRadius: BorderRadius.circular(15.0),
                               child: user.pictureUrl != null
-                                  ? Image.network(user.pictureUrl!, height: 50, width: 50, fit: BoxFit.cover)
+                                  ? Image.network(user.pictureUrl, height: 50, width: 50, fit: BoxFit.cover)
                                   : Image.asset('assets/default_avatar.png', height: 50),
                             ),
                       const SizedBox(height: 10),

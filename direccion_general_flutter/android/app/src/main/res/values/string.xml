@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">DGHospital</string>
+    <string name="app_name">Hospital-DG</string>
     <string name="facebook_app_id">446188561618076</string>
     <string name="fb_login_protocol_scheme">fb446188561618076</string>
     <string name="facebook_client_token">d2a4545113ccc84b1eb887d2a67f5220</string>
