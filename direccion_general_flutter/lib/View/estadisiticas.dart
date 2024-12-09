@@ -131,6 +131,7 @@ Widget build(BuildContext context) {
         ],
       ),
     ),
+
     drawer: Drawer(
       child: CustomDrawer(
         userDataFuture: userDataFuture,
@@ -139,6 +140,7 @@ Widget build(BuildContext context) {
         logout: _logout,
       ),
     ),
+    
     body: SingleChildScrollView( // Agregar SingleChildScrollView para permitir el desplazamiento
       child: Center(
         child: Column(

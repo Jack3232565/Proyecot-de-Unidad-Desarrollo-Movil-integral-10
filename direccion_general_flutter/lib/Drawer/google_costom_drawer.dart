@@ -1,3 +1,6 @@
+import 'package:direccion_general_flutter/View/aprobacionesSM2.dart';
+import 'package:direccion_general_flutter/View/bitacora_screen2.dart';
+import 'package:direccion_general_flutter/View/estadisticas2.dart';
 import 'package:direccion_general_flutter/View/home_screen2.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -86,14 +89,68 @@ class CustomDrawer2 extends StatelessWidget {
                           );
                         },
                       ),
-                      _drawerTile(
-                        context,
-                        icon: Icons.settings,
-                        label: 'Configuración',
+
+                        ListTile(
+                            leading: SizedBox(
+                              width: 25,
+                              height: 25,
+                              child: Image.asset('assets/logo-DG.png'),
+                            ),
+                            title: Text('Aprobaciones Servicio Médico', style: GoogleFonts.comicNeue(fontSize: 16)),
+                            onTap: () {
+                              Navigator.pop(context);
+                              Navigator.pushReplacement(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => AprobacionesScreen2(
+                                    area: area,
+                                    user: user
+                                  ),
+                                ),
+                              );
+                            },
+                          ),
+
+
+                      ListTile(
+                        leading: SizedBox(
+                          width: 25, // Ajusta el ancho
+                          height: 25, // Ajusta la altura
+                          child: Image.asset('assets/Estadisitica.png'), // Ícono personalizado
+                        ),
+                        title: Text('Estadistica', style: GoogleFonts.comicNeue(fontSize: 16)),
                         onTap: () {
-                          Navigator.pop(context);
-                        },
-                      ),
+                                Navigator.pop(context);
+                                Navigator.pushReplacement(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => EstadisticaScreen2(area: area, user: user),
+                                  ),
+                                );
+                              },
+                            ),
+
+
+                        ListTile(
+                          leading: SizedBox(
+                            width: 25, // Ajusta el ancho
+                            height: 25, // Ajusta la altura
+                            child: Image.asset('assets/Bitacora.png'), // Ícono personalizado
+                          ),
+                          title: Text('Bitácora', style: GoogleFonts.comicNeue(fontSize: 16)),
+                          onTap: () {
+                            // Acción para el botón personalizado
+
+                                  Navigator.pop(context);
+                                  Navigator.pushReplacement(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => BitacoraScreen2(area: area, user: user),
+                                    ),
+                                  );
+                          },
+                        ),
+
                       _drawerTile(
                         context,
                         icon: Icons.logout,

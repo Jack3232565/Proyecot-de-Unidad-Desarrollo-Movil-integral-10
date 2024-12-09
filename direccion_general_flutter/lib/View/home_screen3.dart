@@ -1,5 +1,6 @@
 import 'package:direccion_general_flutter/Drawer/facebook_costom_draware.dart';
 import 'package:direccion_general_flutter/View/aprobacionesSM3.dart';
+import 'package:direccion_general_flutter/View/bitacora_screen3.dart';
 import 'package:direccion_general_flutter/View/estadisiticas.dart';
 import 'package:direccion_general_flutter/View/estadisticas3.dart';
 import 'package:direccion_general_flutter/login_screean.dart';
@@ -156,7 +157,7 @@ class HomeScreen3 extends StatelessWidget {
                   MaterialPageRoute(
                     builder: (context) => EstadisticaScreen3(
                       area: area,
-                      user: user, personaId: 0,
+                      user: user,
                     ),
                   ),
                 );
@@ -181,6 +182,13 @@ class HomeScreen3 extends StatelessWidget {
             ElevatedButton(
               onPressed: () {
                 // Acciones cuando se toca el botón
+                Navigator.pop(context);
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => BitacoraScreen3(area: area, user: user),
+                  ),
+                );
               },
               child: Row(
                 mainAxisSize: MainAxisSize.min,

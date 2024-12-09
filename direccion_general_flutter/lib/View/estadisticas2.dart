@@ -13,10 +13,9 @@ import 'package:syncfusion_flutter_charts/charts.dart';
 
 class EstadisticaScreen2 extends StatefulWidget {
  final String area;
- final int personaId;
   final GoogleSignInAccount user; // Agrega el parámetro de usuario
 
-  const EstadisticaScreen2({super.key, required this.area, required this.personaId, required this.user});
+  const EstadisticaScreen2({super.key, required this.area, required this.user});
 
   @override
   _EstadisticaScreen2State createState() => _EstadisticaScreen2State();
@@ -40,7 +39,7 @@ class _EstadisticaScreen2State extends State<EstadisticaScreen2> {
   @override
   void initState() {
     super.initState();
-    userDataFuture = fetchUserData(widget.personaId);
+    
     fetchChartData();
     fetchRoleData();
   }

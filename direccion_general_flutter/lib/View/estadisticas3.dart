@@ -12,10 +12,9 @@ import 'package:syncfusion_flutter_charts/charts.dart';
 
 class EstadisticaScreen3 extends StatefulWidget {
   final String area;
-  final int personaId;
   final FacebookUser user;
 
-  const EstadisticaScreen3({super.key, required this.area, required this.personaId, required this.user});
+  const EstadisticaScreen3({super.key, required this.area, required this.user});
 
   @override
   _EstadisticaScreen3State createState() => _EstadisticaScreen3State();
@@ -39,7 +38,7 @@ class _EstadisticaScreen3State extends State<EstadisticaScreen3> {
   @override
   void initState() {
     super.initState();
-    userDataFuture = fetchUserData(widget.personaId);
+    
     fetchChartData();
     fetchRoleData();
   }

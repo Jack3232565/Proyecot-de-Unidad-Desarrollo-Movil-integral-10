@@ -1,3 +1,6 @@
+import 'package:direccion_general_flutter/View/aprobacionesSM3.dart';
+import 'package:direccion_general_flutter/View/bitacora_screen3.dart';
+import 'package:direccion_general_flutter/View/estadisticas3.dart';
 import 'package:direccion_general_flutter/View/home_screen3.dart';
 import 'package:direccion_general_flutter/oauth/facebook.dart' as fb;
 import 'package:flutter/material.dart';
@@ -6,6 +9,7 @@ import 'package:google_fonts/google_fonts.dart';
 class CustomDrawer3 extends StatelessWidget {
   final fb.FacebookUser user; // Cambiado a FacebookUser
   final String area;
+
   final Future<void> Function() logout;
 
   const CustomDrawer3({
@@ -86,6 +90,75 @@ class CustomDrawer3 extends StatelessWidget {
                           );
                         },
                       ),
+
+
+                        ListTile(
+                            leading: SizedBox(
+                              width: 25,
+                              height: 25,
+                              child: Image.asset('assets/logo-DG.png'),
+                            ),
+                            title: Text('Aprobaciones Servicio Médico', style: GoogleFonts.comicNeue(fontSize: 16)),
+                            onTap: () {
+                              Navigator.pop(context);
+                              Navigator.pushReplacement(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => AprobacionesScreen3(
+                                    area: area,
+                                    user: user
+                                  ),
+                                ),
+                              );
+                            },
+                          ),
+
+
+                        ListTile(
+                          leading: SizedBox(
+                            width: 25, // Ajusta el ancho
+                            height: 25, // Ajusta la altura
+                            child: Image.asset('assets/Estadisitica.png'), // Ícono personalizado
+                          ),
+                          title: Text('Estadistica', style: GoogleFonts.comicNeue(fontSize: 16)),
+                          onTap: () {
+                                  Navigator.pop(context);
+                                  Navigator.pushReplacement(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => EstadisticaScreen3(area: area, user: user),
+                                    ),
+                                  );
+                                },
+                              ),
+
+
+                        ListTile(
+                          leading: SizedBox(
+                            width: 25, // Ajusta el ancho
+                            height: 25, // Ajusta la altura
+                            child: Image.asset('assets/Bitacora.png'), // Ícono personalizado
+                          ),
+                          title: Text('Bitácora', style: GoogleFonts.comicNeue(fontSize: 16)),
+                          onTap: () {
+                            // Acción para el botón personalizado
+
+                                  Navigator.pop(context);
+                                  Navigator.pushReplacement(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => BitacoraScreen3(area: area, user: user),
+                                    ),
+                                  );
+                          },
+                        ),
+
+
+
+
+
+
+
                       _drawerTile(
                         context,
                         icon: Icons.settings,

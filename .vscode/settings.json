@@ -1,3 +1,4 @@
 {
-    "java.configuration.updateBuildConfiguration": "interactive"
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "cmake.sourceDirectory": "C:/Users/piano/OneDrive/Escritorio/Desarrollo Movil Integral/Proyecto/Proyecot-de-Unidad-Desarrollo-Movil-integral-10/direccion_general_flutter/linux"
 }

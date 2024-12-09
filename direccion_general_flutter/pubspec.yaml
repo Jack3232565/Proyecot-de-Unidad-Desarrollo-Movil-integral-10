@@ -83,6 +83,7 @@ flutter:
     - assets/Bitacora.png
     - assets/icono_facebook.png
     - assets/default_avatar.png
+    - assets/OrganigramaEquipo.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

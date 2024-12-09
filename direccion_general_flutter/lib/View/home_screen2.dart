@@ -1,5 +1,6 @@
 import 'package:direccion_general_flutter/Drawer/google_costom_drawer.dart';
 import 'package:direccion_general_flutter/View/aprobacionesSM2.dart';
+import 'package:direccion_general_flutter/View/bitacora_screen2.dart';
 import 'package:direccion_general_flutter/View/estadisticas2.dart';
 import 'package:direccion_general_flutter/login_screean.dart';
 import 'package:direccion_general_flutter/oauth/google.dart';
@@ -170,7 +171,7 @@ class HomeScreen2 extends StatelessWidget {
                   MaterialPageRoute(
                     builder: (context) => EstadisticaScreen2(
                       area: area,
-                       user: user, personaId: 0,
+                       user: user,
                     ),
                   ),
                 );
@@ -194,7 +195,14 @@ class HomeScreen2 extends StatelessWidget {
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-                // Acciones cuando se toca el botón
+            // Acción para el botón personalizado
+            Navigator.pop(context);
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => BitacoraScreen2(area: area, user: user),
+                ),
+              );
               },
               child: Row(
                 mainAxisSize: MainAxisSize.min,
