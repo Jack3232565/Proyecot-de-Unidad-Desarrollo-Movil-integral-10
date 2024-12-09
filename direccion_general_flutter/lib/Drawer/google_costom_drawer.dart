@@ -2,6 +2,8 @@ import 'package:direccion_general_flutter/View/aprobacionesSM2.dart';
 import 'package:direccion_general_flutter/View/bitacora_screen2.dart';
 import 'package:direccion_general_flutter/View/estadisticas2.dart';
 import 'package:direccion_general_flutter/View/home_screen2.dart';
+import 'package:direccion_general_flutter/View/nosotros_screen2.dart';
+import 'package:direccion_general_flutter/View/terminosCondiciones2.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:google_sign_in/google_sign_in.dart';
@@ -150,6 +152,40 @@ class CustomDrawer2 extends StatelessWidget {
                                   );
                           },
                         ),
+
+
+                          ListTile(
+                            leading: const Icon(Icons.people_sharp),
+                            title: Text('Nosotros', style: GoogleFonts.comicNeue(fontSize: 16)),
+                            onTap: () {
+                              Navigator.pop(context);
+                                    Navigator.pushReplacement(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => NosotrosScreen2(area: area, user: user),
+                                      ),
+                                    );
+                            },
+                          ),
+
+
+
+                          ListTile(
+                            leading: const Icon(Icons.privacy_tip),
+                            title: Text('Términos y Condiciones', style: GoogleFonts.comicNeue(fontSize: 16)),
+                            onTap: () {
+                              Navigator.pop(context);
+                                    Navigator.pushReplacement(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => TerminosScreen2(area: area, user: user),
+                                      ),
+                                    );
+                            },
+                          ),
+
+
+
 
                       _drawerTile(
                         context,

@@ -2,6 +2,8 @@ import 'package:direccion_general_flutter/View/aprobacionesSM3.dart';
 import 'package:direccion_general_flutter/View/bitacora_screen3.dart';
 import 'package:direccion_general_flutter/View/estadisticas3.dart';
 import 'package:direccion_general_flutter/View/home_screen3.dart';
+import 'package:direccion_general_flutter/View/nosotros_screen3.dart';
+import 'package:direccion_general_flutter/View/terminosCondiciones3.dart';
 import 'package:direccion_general_flutter/oauth/facebook.dart' as fb;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -154,19 +156,37 @@ class CustomDrawer3 extends StatelessWidget {
                         ),
 
 
+                          ListTile(
+                            leading: const Icon(Icons.people_sharp),
+                            title: Text('Nosotros', style: GoogleFonts.comicNeue(fontSize: 16)),
+                            onTap: () {
+                              Navigator.pop(context);
+                                    Navigator.pushReplacement(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => NosotrosScreen3(area: area, user: user),
+                                      ),
+                                    );
+                            },
+                          ),
+
+                                                    ListTile(
+                            leading: const Icon(Icons.privacy_tip),
+                            title: Text('Términos y Condiciones', style: GoogleFonts.comicNeue(fontSize: 16)),
+                            onTap: () {
+                              Navigator.pop(context);
+                                    Navigator.pushReplacement(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => TerminosScreen3(area: area, user: user),
+                                      ),
+                                    );
+                            },
+                          ),
 
 
 
 
-
-                      _drawerTile(
-                        context,
-                        icon: Icons.settings,
-                        label: 'Configuración',
-                        onTap: () {
-                          Navigator.pop(context);
-                        },
-                      ),
                       _drawerTile(
                         context,
                         icon: Icons.logout,
