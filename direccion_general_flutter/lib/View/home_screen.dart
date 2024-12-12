@@ -18,7 +18,6 @@ class HomeScreen extends StatefulWidget {
   
 }
 
-
 class _HomeScreenState extends State<HomeScreen> {
   late Future<Map<String, dynamic>> userDataFuture;
   

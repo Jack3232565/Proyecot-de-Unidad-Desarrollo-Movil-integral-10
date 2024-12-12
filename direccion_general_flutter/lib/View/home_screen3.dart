@@ -1,44 +1,32 @@
-import 'package:direccion_general_flutter/Drawer/google_costom_drawer.dart';
-import 'package:direccion_general_flutter/View/aprobacionesSM2.dart';
-import 'package:direccion_general_flutter/View/bitacora_screen2.dart';
-import 'package:direccion_general_flutter/View/estadisticas2.dart';
+import 'package:direccion_general_flutter/Drawer/facebook_costom_draware.dart';
+import 'package:direccion_general_flutter/View/aprobacionesSM3.dart';
+import 'package:direccion_general_flutter/View/bitacora_screen3.dart';
+import 'package:direccion_general_flutter/View/estadisticas3.dart';
 import 'package:direccion_general_flutter/login_screean.dart';
-import 'package:direccion_general_flutter/oauth/google.dart';
-import 'package:google_sign_in/google_sign_in.dart';
+import 'package:direccion_general_flutter/oauth/facebook.dart' as fb;
+import 'package:direccion_general_flutter/oauth/facebook.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 // import 'package:direccion_general_flutter/View/sign_up_page.dart'; // Adjust the path as necessary
 
-class HomeScreen2 extends StatelessWidget {
-  final String area; // Agrega el parámetro de área
-  final dynamic user; // Cambiar el tipo a dynamic, ya que puede ser un GoogleSignInAccount o un Map<String, dynamic>
+class HomeScreen3 extends StatelessWidget {
+  final String area;
+  final fb.FacebookUser user;
 
-  const HomeScreen2({super.key, required this.user, required this.area});
+  const HomeScreen3({super.key, required this.user, required this.area});
 
   @override
   Widget build(BuildContext context) {
-    // Verificar si el usuario es una cuenta de Google o un Map de Facebook
-    bool isGoogleUser = user is GoogleSignInAccount;
-    // bool isFacebookUser = user is Map<String, dynamic>;
-    String displayName = 'Usuario desconocido';
-    String email = 'Sin correo';
-    String photoUrl = '';
-
-    // Si es un GoogleSignInAccount, obtenemos los datos correspondientes
-    if (isGoogleUser) {
-      displayName = user.displayName ?? 'No Name';
-      email = user.email ?? 'No Email';
-      photoUrl = user.photoUrl ?? '';
-    } 
-
-
+    final String photoUrl = user.pictureUrl ?? '';
+    final String displayName = user.name ?? 'Usuario';
+    final String email = user.email ?? 'Correo no disponible';
 
     return Scaffold(
       appBar: AppBar(
         title: Row(
           children: [
             Image.asset(
-              'assets/direccion_general_logo.png', // Asegúrate de que esta ruta sea correcta
+              'assets/direccion_general_logo.png', 
               fit: BoxFit.contain,
               height: 40,
             ),
@@ -58,27 +46,24 @@ class HomeScreen2 extends StatelessWidget {
           TextButton(
             child: Text('Logout', style: GoogleFonts.roboto(color: Colors.white)),
             onPressed: () async {
-              await GoogleSignInApi.logout();
+              await FacebookSignInApi.logout();
               Navigator.of(context).pushReplacement(
                 MaterialPageRoute(builder: (context) => const LoginScreen()),
               );
             },
-          )
+          ),
         ],
       ),
-
-      drawer: CustomDrawer2(
+      drawer: CustomDrawer3(
         user: user,
         area: area,
         logout: () async {
-          await GoogleSignInApi.logout();
+          await FacebookSignInApi.logout();
           Navigator.of(context).pushReplacement(
             MaterialPageRoute(builder: (context) => const LoginScreen()),
           );
         },
       ),
-
-
       body: Container(
         alignment: Alignment.center,
         child: Column(
@@ -118,7 +103,7 @@ class HomeScreen2 extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => AprobacionesScreen2(
+                    builder: (context) => AprobacionesScreen3(
                       area: area,
                       user: user,
                     ),
@@ -169,9 +154,9 @@ class HomeScreen2 extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => EstadisticaScreen2(
+                    builder: (context) => EstadisticaScreen3(
                       area: area,
-                       user: user,
+                      user: user,
                     ),
                   ),
                 );
@@ -195,14 +180,14 @@ class HomeScreen2 extends StatelessWidget {
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-            // Acción para el botón personalizado
-            Navigator.pop(context);
-              Navigator.pushReplacement(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => BitacoraScreen2(area: area, user: user),
-                ),
-              );
+                // Acciones cuando se toca el botón
+                Navigator.pop(context);
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => BitacoraScreen3(area: area, user: user),
+                  ),
+                );
               },
               child: Row(
                 mainAxisSize: MainAxisSize.min,

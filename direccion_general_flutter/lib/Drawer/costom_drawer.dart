@@ -1,5 +1,8 @@
 // custom_drawer.dart
+import 'package:direccion_general_flutter/View/bitacora_screen.dart';
 import 'package:direccion_general_flutter/View/estadisiticas.dart';
+import 'package:direccion_general_flutter/View/nosotros_screen.dart';
+import 'package:direccion_general_flutter/View/terminosCondiciones.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../View/home_screen.dart';
@@ -83,7 +86,7 @@ class CustomDrawer extends StatelessWidget {
                     const SizedBox(height: 10),
                     Text(
                       'Bienvenid@: ${userData['correo']}',
-                      style: GoogleFonts.comicNeue(fontSize: 10),
+                      style: GoogleFonts.comicNeue(fontSize: 8),
                     ),
                     const SizedBox(height: 10),
                     Text(
@@ -162,19 +165,54 @@ class CustomDrawer extends StatelessWidget {
               title: Text('Bitácora', style: GoogleFonts.comicNeue(fontSize: 16)),
               onTap: () {
                 // Acción para el botón personalizado
+
+                      Navigator.pop(context);
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => BitacoraScreen(area: area, personaId: personaId),
+                        ),
+                      );
+
               },
             ),
 
 
             ListTile(
-              leading: const Icon(Icons.settings),
-              title: Text('Configuración', style: GoogleFonts.comicNeue(fontSize: 16)),
+              leading: const Icon(Icons.people_sharp),
+              title: Text('Nosotros', style: GoogleFonts.comicNeue(fontSize: 16)),
               onTap: () {
                 Navigator.pop(context);
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => NosotrosScreen(area: area, personaId: personaId),
+                        ),
+                      );
               },
             ),
+
+
+            ListTile(
+              leading: const Icon(Icons.privacy_tip),
+              title: Text('Términos y Condiciones', style: GoogleFonts.comicNeue(fontSize: 16)),
+              onTap: () {
+                Navigator.pop(context);
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => TerminosScreen(area: area, personaId: personaId),
+                        ),
+                      );
+              },
+            ),
+
+
+
+
+
         // Agrega más ListTile como en tu ejemplo
-        ListTile(
+            ListTile(
           leading: const Icon(Icons.logout),
           title: Text('Salir', style: GoogleFonts.comicNeue(fontSize: 16)),
           onTap: () {
@@ -182,6 +220,7 @@ class CustomDrawer extends StatelessWidget {
             logout();
           },
         ),
+        
               Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
@@ -211,8 +250,8 @@ Future<Map<String, dynamic>> fetchUserData(int personaId) async {
     );
 
     // Verifica el estado de las respuestas
-    print('Usuario Response Status: ${usuarioResponse.statusCode}');
-    print('Persona Response Status: ${personaResponse.statusCode}');
+    // print('Usuario Response Status: ${usuarioResponse.statusCode}');
+    // print('Persona Response Status: ${personaResponse.statusCode}');
 
     if (usuarioResponse.statusCode == 200 && personaResponse.statusCode == 200) {
       final List<dynamic> usuarios = jsonDecode(usuarioResponse.body);
@@ -237,7 +276,7 @@ Future<Map<String, dynamic>> fetchUserData(int personaId) async {
     throw Exception("Failed to load user data");
   } catch (e) {
     // Manejo de excepciones
-    print("Error fetching user data: $e");
+    // print("Error fetching user data: $e");
     throw Exception("Error fetching user data");
   }
 }

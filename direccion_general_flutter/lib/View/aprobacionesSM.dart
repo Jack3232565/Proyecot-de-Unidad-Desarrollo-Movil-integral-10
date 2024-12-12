@@ -7,7 +7,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 import 'package:intl/intl.dart' as intl;
-
 import 'package:direccion_general_flutter/Drawer/costom_drawer.dart';
 
 // ------------ Extraccion de datos de los medicos -----------------
@@ -60,9 +59,6 @@ class Solicitud {
 }
 //-----------------------------------------------------------
 
-
-
-
 class AprobacionesScreen extends StatefulWidget {
   final String area;
   final int personaId;
@@ -77,13 +73,13 @@ class _AprobacionesScreenState extends State<AprobacionesScreen> {
   
   late Future<Map<String, dynamic>> userDataFuture; // Cambiado a late para inicializar en initState
   List<dynamic> aprobaciones = [];// Cambiado a List<dynamic> para que coincida con el tipo de retorno
-  Map<int, Map<String, dynamic>> personalMedicoData = {};// Cambiado a Map<int, Map<String, dynamic>> para que coincida con el tipo de retorno
+  Map<int, Map<String, dynamic>> personalMedicoData = {};
+  // Cambiado a Map<int, Map<String, dynamic>> para que coincida con el tipo de retorno
 
   List<Doctor> listaMedicos = [];  // Cambiado a List<Doctor> para que coincida con el tipo de retorno
 
   Map<int, Map<String, dynamic>> solicitudesRealizadas = {};  // Cambiado a map de tipo Solicitud
 
-  
 
 @override
 void initState() {
@@ -133,9 +129,6 @@ void initState() {
     }
   }
 
-
-
-
   Future<void> fetchPersonalMedicoData() async {
     try {
       final response = await http.get(
@@ -162,7 +155,6 @@ void initState() {
     }
   }
 
-
 //------------------------------------------------------------------------
 //Estraccion de los datos de los medicos
 
@@ -181,8 +173,6 @@ Future<List<Doctor>> fetchDoctors() async {
     throw Exception('Error fetching doctors: $e');
   }
 }
-
-
 //------------------------------------------------------------------------
 //Estraccion de los datos de las solicitudes
   // Función para obtener las solicitudes
@@ -220,12 +210,7 @@ Future<void> fetchSolicitudes() async {
     print('Error en la respuesta: ${response.statusCode}');
   }
 }
-
-
-
-
-
-
+// ------------------------------------------------
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -280,12 +265,28 @@ Future<void> fetchSolicitudes() async {
               style: GoogleFonts.comicNeue(fontSize: 12, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 20),
-            const Text('Solicitudes Pendientes', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+            Text('Solicitudes Pendientes', style: GoogleFonts.comicNeue(fontSize: 20, fontWeight: FontWeight.bold)),
 
             ElevatedButton(
-                      onPressed: () => _showCreateAprobacionModal(context),
-                      child: const Text('Crear Aprobación'),
-                    ),
+              onPressed: () => _showCreateAprobacionModal(context),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Color(0xFF10B981), // Verde
+                foregroundColor: Colors.white, // Texto blanco
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8), // Bordes redondeados
+                ),
+              ),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: const [
+                  Icon(Icons.add),
+                  SizedBox(width: 8),
+                  Text('Crear Aprobación'),
+                ],
+              ),
+            ),
+
+            SizedBox.fromSize(size: const Size.fromHeight(10)), // Espacio entre el botón y la tabla
 
             _buildSolicitudesTable(), //Agregar el widget _buildSolicitudesTable para mostrar la tabla de solicitudes
           ],
@@ -293,54 +294,52 @@ Future<void> fetchSolicitudes() async {
       ),
     );
   }
+
+// ---------------------------------------------------------------------------------------------------
   
 Widget _buildSolicitudesTable() {
   return Expanded(
     child: SingleChildScrollView(
       scrollDirection: Axis.horizontal,
-      child: SingleChildScrollView( 
-      scrollDirection: Axis.vertical,
-      child: DataTable(
-        columns: const [
-          DataColumn(label: Text('N°')),
-          DataColumn(label: Text('Personal Médico')),
-          DataColumn(label: Text('Solicitud')), // Nueva columna
-          DataColumn(label: Text('Comentario')),
-          DataColumn(label: Text('Estatus')),
-          DataColumn(label: Text('Tipo')),
-          DataColumn(label: Text('Fecha de Registro')),
-          DataColumn(label: Text('Fecha de Aprobación')),
-        ],
-        rows: _buildDataRows(),
+      child: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: DataTable(
+          // Personalizar el encabezado de la tabla
+          headingRowColor: MaterialStateProperty.all(Colors.blue), // Color de fondo de los encabezados
+          headingTextStyle: TextStyle(color: Colors.white, fontWeight: FontWeight.bold), // Color y estilo del texto
+
+          columns: const [
+            DataColumn(label: Text('N°')),
+            DataColumn(label: Text('Personal Médico')),
+            DataColumn(label: Text('Solicitud')),
+            DataColumn(label: Text('Comentario')),
+            DataColumn(label: Text('Estatus')),
+            DataColumn(label: Text('Tipo')),
+            DataColumn(label: Text('Fecha de Registro')),
+            DataColumn(label: Text('Fecha de Aprobación')),
+          ],
+
+          rows: _buildDataRows(context, aprobaciones.cast<Map<String, dynamic>>(), personalMedicoData, solicitudesRealizadas),
+        ),
       ),
-    ),
     ),
   );
 }
 
 
-
-
-
-List<DataRow> _buildDataRows() {// Cambiado a List<DataRow> para que coincida con el tipo de retorno
-
+// ------------------------------------------------------------------------------------------------------------
+// Función para construir las filas de datos
+List<DataRow> _buildDataRows(BuildContext context, List<Map<String, dynamic>> aprobaciones, Map<int, Map<String, dynamic>> personalMedicoData, Map<int, Map<String, dynamic>> solicitudesRealizadas) {
   intl.Intl.defaultLocale = 'es_ES';
   final dateFormat = DateFormat('EEEE, d MMMM yyyy');
+  bool isSelected = false; // Variable para controlar si una fila está seleccionada
 
   return aprobaciones.map<DataRow>((item) {
     final medicoId = item['Personal_Medico_ID'];
     final medicoData = personalMedicoData[medicoId];
     final solicitudId = item['Solicitud_id'];
     final solicitudData = solicitudId != null ? solicitudesRealizadas[solicitudId] : null;
-    if (solicitudData == null) {
-      print('Solicitud con ID $solicitudId no encontrada.');
-      print('SolicitudData _buldDAtarows $solicitudData no encontrada.');
-    }
-    print('Prueba de que estallegando $solicitudData');
-    print('Solicitudes realizadas (no resive datos): $solicitudesRealizadas');
-    
-  //-----------------------------------
-    // Formateo de fechas
+
     String fechaRegistroFormateada = '';
     String fechaActualizacionFormateada = '';
 
@@ -351,20 +350,25 @@ List<DataRow> _buildDataRows() {// Cambiado a List<DataRow> para que coincida co
       fechaActualizacionFormateada = dateFormat.format(DateTime.parse(item['Fecha_Actualizacion']));
     }
 
-    //-------------
-    // Construcción del texto formateado para la solicitud
-      String decodeUtf8(dynamic input) {
-        return input != null ? utf8.decode(input.toString().runes.toList()) : 'N/A';
-      }
+    String decodeUtf8(dynamic input) {
+      return input != null ? utf8.decode(input.toString().runes.toList()) : 'N/A';
+    }
 
-      final String solicitudTexto = solicitudData != null
-          ? 'Solicitud: $solicitudId, Prioridad: ${decodeUtf8(solicitudData['Prioridad'])}, Descripción: ${decodeUtf8(solicitudData['Descripcion'])}, Estatus: ${decodeUtf8(solicitudData['Estatus'])}'
-          : 'Solicitud no disponible';
-    //-------------
+    final String solicitudTexto = solicitudData != null
+        ? 'Solicitud: $solicitudId, Prioridad: ${decodeUtf8(solicitudData['Prioridad'])}, Descripción: ${decodeUtf8(solicitudData['Descripcion'])}, Estatus: ${decodeUtf8(solicitudData['Estatus'])}'
+        : 'Solicitud no disponible';
 
-    return DataRow(// Se agrega el DataRow para mostrar los datos de cada fila
+    // Aquí implementamos el efecto cebra y hover
+    return DataRow(
+      selected: isSelected,
+      color: MaterialStateProperty.resolveWith<Color>((states) {
+        if (states.contains(MaterialState.selected)) {
+          return Colors.blueAccent.shade100; // Color cuando se selecciona
+        }
+        // Efecto cebra: alterna entre blanco y gris claro para las filas
+        return (aprobaciones.indexOf(item) % 2 == 0) ? Colors.white : Colors.grey.shade100;
+      }),
       cells: [
-        // N° de la solicitud
         DataCell(GestureDetector(
           onTap: () {
             _showOptionsModal(context, item, medicoData, solicitudData != null ? {
@@ -376,9 +380,8 @@ List<DataRow> _buildDataRows() {// Cambiado a List<DataRow> para que coincida co
           },
           child: Text(item['id'].toString()),
         )),
-        
         // Personal Médico
-        DataCell(GestureDetector(// Se agrega el GestureDetector para detectar el tap
+        DataCell(GestureDetector(
           onTap: () {
             _showOptionsModal(context, item, medicoData, solicitudData != null ? {
               'prioridad': solicitudData['Prioridad'],
@@ -391,33 +394,22 @@ List<DataRow> _buildDataRows() {// Cambiado a List<DataRow> para que coincida co
               ? '${medicoData['titulo']} ${medicoData['nombre']} ${medicoData['primerApellido']} ${medicoData['segundoApellido']}'
               : 'Nombre no disponible'),
         )),
-
-        // Detalles de la Solicitud (Prioridad, Descripción, Estado)
-        DataCell(
-                GestureDetector(
-                    onTap: () {
-                      _showOptionsModal(
-                        context, 
-                        item, 
-                        medicoData, 
-                        solicitudData != null 
-                          ? {
-                              'prioridad': solicitudData['Prioridad'],
-                              'descripcion': solicitudData['Descripcion'],
-                              'estado': solicitudData['Estado'],
-                              'solicitud': solicitudData['Solcitud'],
-                            } 
-                          : null
-                      );
-                    },
-                    child: Text(
-                      solicitudTexto,
-                      overflow: TextOverflow.ellipsis,
-                      maxLines: 2,
-                    ),
-                  ),
-                ),
-
+        // Detalles de la Solicitud
+        DataCell(GestureDetector(
+          onTap: () {
+            _showOptionsModal(context, item, medicoData, solicitudData != null ? {
+              'prioridad': solicitudData['Prioridad'],
+              'descripcion': solicitudData['Descripcion'],
+              'estado': solicitudData['Estado'],
+              'solicitud': solicitudData['Solcitud'],
+            } : null);
+          },
+          child: Text(
+            solicitudTexto,
+            overflow: TextOverflow.ellipsis,
+            maxLines: 2,
+          ),
+        )),
         // Comentario
         DataCell(GestureDetector(
           onTap: () {
@@ -430,7 +422,6 @@ List<DataRow> _buildDataRows() {// Cambiado a List<DataRow> para que coincida co
           },
           child: Text(item['Comentario'] ?? ''),
         )),
-
         // Estatus de la Solicitud
         DataCell(GestureDetector(
           onTap: () {
@@ -443,7 +434,6 @@ List<DataRow> _buildDataRows() {// Cambiado a List<DataRow> para que coincida co
           },
           child: Text(item['Estatus'] ?? ''),
         )),
-
         // Tipo de Solicitud
         DataCell(GestureDetector(
           onTap: () {
@@ -456,7 +446,6 @@ List<DataRow> _buildDataRows() {// Cambiado a List<DataRow> para que coincida co
           },
           child: Text(item['Tipo'] ?? ''),
         )),
-
         // Fecha de Registro
         DataCell(GestureDetector(
           onTap: () {
@@ -469,7 +458,6 @@ List<DataRow> _buildDataRows() {// Cambiado a List<DataRow> para que coincida co
           },
           child: Text(fechaRegistroFormateada),
         )),
-
         // Fecha de Aprobación
         DataCell(GestureDetector(
           onTap: () {
@@ -477,7 +465,7 @@ List<DataRow> _buildDataRows() {// Cambiado a List<DataRow> para que coincida co
               'prioridad': solicitudData['Prioridad'],
               'descripcion': solicitudData['Descripcion'],
               'estado': solicitudData['Estado'],
-            'solicitud': solicitudData['Solicitud'],
+              'solicitud': solicitudData['Solicitud'],
             } : null);
           },
           child: Text(fechaActualizacionFormateada),
@@ -487,9 +475,7 @@ List<DataRow> _buildDataRows() {// Cambiado a List<DataRow> para que coincida co
   }).toList();
 }
 
-
-
-
+//----------------------------------------------------------------------------------------
 
 // Función para mostrar el modal de opciones
 void _showOptionsModal(BuildContext context, dynamic item, Map<String, dynamic>? medicoData, Map<String, dynamic>? solicitudData) {
@@ -663,7 +649,11 @@ void _showOptionsModal(BuildContext context, dynamic item, Map<String, dynamic>?
                   }
                 },
               ),
-              ElevatedButton(
+        ],
+      ),
+    ),
+    actions: [
+                    ElevatedButton(
                 onPressed: () {
                   _updateAprobacion(
                     item['id'],
@@ -677,6 +667,14 @@ void _showOptionsModal(BuildContext context, dynamic item, Map<String, dynamic>?
                   );
                   Navigator.of(context).pop();
                 },
+                  style: TextButton.styleFrom(
+                  foregroundColor: Colors.white, // Texto blanco
+                  backgroundColor: Colors.green, // Fondo verde
+                  padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 20),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8), // Bordes redondeados
+                  ),
+                ),
                 child: const Text('Actualizar'),
               ),
 
@@ -684,11 +682,17 @@ void _showOptionsModal(BuildContext context, dynamic item, Map<String, dynamic>?
             onPressed: () {
               _showDeleteConfirmation(context, item['id']);
             },
+              style: TextButton.styleFrom(
+              foregroundColor: Colors.white, // Texto blanco
+              backgroundColor: const Color.fromARGB(255, 5, 10, 5), // Fondo verde
+              padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 20),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(8), // Bordes redondeados
+              ),
+            ),
             child: const Text('Eliminar'),
           ),
-        ],
-      ),
-    ),
+    ],
   );
 },
   );
@@ -724,7 +728,6 @@ void _showDeleteConfirmation(BuildContext context, int id) {
 }
 
 
-
 Future<void> _updateAprobacion(int id, String comentario, String estatus, String tipo, String fechaRegistro, String fechaAprobacion, int personalMedicoId, int solicitudId) async {
   try {
     final response = await http.put(
@@ -752,7 +755,7 @@ Future<void> _updateAprobacion(int id, String comentario, String estatus, String
   }
 }
 
-  Future<void> _deleteAprobacion(int id) async {
+Future<void> _deleteAprobacion(int id) async {
     try {
       final response = await http.delete(
         Uri.parse('https://back-end-hospital2-0.onrender.com/tbb_aprobaciones/$id'),
@@ -767,7 +770,6 @@ Future<void> _updateAprobacion(int id, String comentario, String estatus, String
       print('Error: $e');
     }
   }
-
 
 //------------------Creacion del la Aprobación-------------------------------------------------------------------------------------------
 
@@ -812,12 +814,6 @@ Future<void> _createAprobacion(
     );
   }
 }
-
-
-
-
-
-
 
 //--------------------------------------------------------------------------------------------------
 // Opciones para el campo Tipo
@@ -1013,8 +1009,16 @@ void _showCreateAprobacionModal(BuildContext context) {
             onPressed: () {
               Navigator.of(context).pop();
             },
-            child: const Text('Cancelar'),
+            style: TextButton.styleFrom(
+              foregroundColor: const Color.fromARGB(255, 255, 254, 254), // Color del texto
+              backgroundColor: Colors.black, // Fondo negro
+            ),
+            child: const Text(
+              'Cancelar',
+              style: TextStyle(color: Colors.white), // Cambia el color del texto si quieres que sea visible
+            ),
           ),
+
           TextButton(
             onPressed: () {
             if (comentarioController.text.isEmpty || 
@@ -1042,6 +1046,14 @@ void _showCreateAprobacionModal(BuildContext context) {
                 solicitudSeleccionado!,
               );
             },
+              style: TextButton.styleFrom(
+              foregroundColor: Colors.white, // Texto blanco
+              backgroundColor: Colors.green, // Fondo verde
+              padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15), // Bordes redondeados
+              ),
+            ),
             child: const Text('Crear Aprobación'),
           ),
         ],

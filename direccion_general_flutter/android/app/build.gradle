@@ -26,6 +26,8 @@ android {
         versionCode = flutter.versionCode
         versionName = flutter.versionName
         multiDexEnabled true  // Activar MultiDex
+
+        minSdkVersion 21 // Necesario para Facebook SDK
     }
 
     signingConfigs {
@@ -51,6 +53,8 @@ dependencies {
     // Firebase Authentication
     implementation platform('com.google.firebase:firebase-bom:32.2.2')  // Última versión
     implementation 'com.google.firebase:firebase-auth'
+    implementation 'com.facebook.android:facebook-android-sdk:latest.release'
+
 }
 
 apply plugin: 'com.google.gms.google-services'  // Aplicar el plugin de Google Services

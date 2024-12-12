@@ -1,0 +1,7 @@
+
+
+C:\Users\piano>keytool -exportcert -alias androiddebugkey -keystore "C:\Users\piano\.android\debug.keystore" | "C:\path_to_openssl\bin\openssl" sha1 -binary | "C:\path_to_openssl\bin\openssl" base64
+Enter keystore password:  123456
+
+VzSiQcXRmi2kyjzcA+mYLEtbGVs=
+

@@ -1,6 +1,7 @@
-import 'package:direccion_general_flutter/Drawer/google_costom_drawer.dart';
+import 'package:direccion_general_flutter/Drawer/facebook_costom_draware.dart';
 import 'package:direccion_general_flutter/View/home_screen2.dart'as home;
 import 'package:direccion_general_flutter/login_screean.dart'; // Corrección en el nombre del archivo; // Import the HomeScreen class with alias
+import 'package:direccion_general_flutter/oauth/facebook.dart' as fb;
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'dart:convert';
@@ -65,17 +66,18 @@ class Solicitud {
 
 
 
-class AprobacionesScreen2 extends StatefulWidget {
+class AprobacionesScreen3 extends StatefulWidget {
   final String area;
-  final GoogleSignInAccount user; // Agrega el parámetro de usuario
+  final fb.FacebookUser user;
+  
 
-  const AprobacionesScreen2({super.key, required this.area, required this.user});
+  const AprobacionesScreen3({super.key, required this.area, required this.user});
 
   @override
-  _AprobacionesScreen2State createState() => _AprobacionesScreen2State();
+  _AprobacionesScreen3State createState() => _AprobacionesScreen3State();
 }
 
-class _AprobacionesScreen2State extends State<AprobacionesScreen2> {
+class _AprobacionesScreen3State extends State<AprobacionesScreen3> {
   
   late Future<Map<String, dynamic>> userDataFuture; // Cambiado a late para inicializar en initState
   List<dynamic> aprobaciones = [];// Cambiado a List<dynamic> para que coincida con el tipo de retorno
@@ -224,9 +226,6 @@ Future<void> fetchSolicitudes() async {
 
 
 
-
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -265,18 +264,18 @@ Future<void> fetchSolicitudes() async {
         ),
       ),
 
-        drawer: CustomDrawer2(// se agrega el drawer para el usuario lo geado con google
-          area: widget.area, // Reemplaza con el valor adecuado
-          user: widget.user, // Reemplaza con el valor adecuado
-          logout: () async {
-            await GoogleSignIn().signOut();
-            Navigator.of(context).pushReplacement(
-              MaterialPageRoute(
-                builder: (context) => const LoginScreen(),
-              ),
-            );
-          },
-        ),//
+    drawer: CustomDrawer3(// se agrega el drawer para el usuario lo geado con google
+                      area: widget.area, // Reemplaza con el valor adecuado
+                      user: widget.user, // Reemplaza con el valor adecuado
+      logout: () async {
+        await GoogleSignIn().signOut();
+        Navigator.of(context).pushReplacement(
+          MaterialPageRoute(
+            builder: (context) => const LoginScreen(),
+          ),
+        );
+      },
+    ),//
 
 
       body: Center(
@@ -318,8 +317,8 @@ Future<void> fetchSolicitudes() async {
     );
   }
 
-  //-------------------------------------------------------------------------------------
-  
+// ---------------------------------------------------------------------
+
 Widget _buildSolicitudesTable() {
   return Expanded(
     child: SingleChildScrollView(
@@ -498,8 +497,7 @@ List<DataRow> _buildDataRows(BuildContext context, List<Map<String, dynamic>> ap
   }).toList();
 }
 
-
-//----------------------------------------------------------------------
+//---------------------------------------------------------------------
 
 
 // Función para mostrar el modal de opciones
@@ -583,7 +581,7 @@ void _showOptionsModal(BuildContext context, dynamic item, Map<String, dynamic>?
                     child: Row(
                       children: [
                         Icon(item['icon'] as IconData?, color: item['color'] as Color?), // Ícono con color
-                        const SizedBox(width: 10),
+                        SizedBox(width: 10),
                         Text(item['value'] as String, style: GoogleFonts.comicNeue(fontSize: 16)),
                       ],
                     ),
@@ -906,7 +904,7 @@ Future<void> _createNewAprobacion(
     );
 
     if (response.statusCode == 200 || response.statusCode == 201) {
-      final aprobacionesScreenState = context.findAncestorStateOfType<_AprobacionesScreen2State>();
+      final aprobacionesScreenState = context.findAncestorStateOfType<_AprobacionesScreen3State>();
       aprobacionesScreenState?.fetchAprobaciones();
       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Creación exitosa')));
       Navigator.of(context).pop();
@@ -1038,7 +1036,7 @@ void _showCreateAprobacionModal(BuildContext context) {
           ),
         ),
         actions: [
-          TextButton(
+           TextButton(
             onPressed: () {
               Navigator.of(context).pop();
             },

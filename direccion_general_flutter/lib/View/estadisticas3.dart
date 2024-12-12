@@ -1,6 +1,7 @@
-import 'package:direccion_general_flutter/Drawer/costom_drawer.dart';
+import 'package:direccion_general_flutter/Drawer/facebook_costom_draware.dart';
 import 'package:direccion_general_flutter/View/Grafics/GrafiAprobaciones.dart';
 import 'package:direccion_general_flutter/login_screean.dart';
+import 'package:direccion_general_flutter/oauth/facebook.dart';
 import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
@@ -8,17 +9,17 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
-class EstadisticaScreen extends StatefulWidget {
+class EstadisticaScreen3 extends StatefulWidget {
   final String area;
-  final int personaId;
+  final FacebookUser user;
 
-  const EstadisticaScreen({super.key, required this.area, required this.personaId});
+  const EstadisticaScreen3({super.key, required this.area, required this.user});
 
   @override
-  _EstadisticaScreenState createState() => _EstadisticaScreenState();
+  _EstadisticaScreen3State createState() => _EstadisticaScreen3State();
 }
 
-class _EstadisticaScreenState extends State<EstadisticaScreen> {
+class _EstadisticaScreen3State extends State<EstadisticaScreen3> {
   late Future<Map<String, dynamic>> userDataFuture;
   Map<String, Map<String, int>> estatusTipoCount = {
     'Aprobado': {'Administrativo': 0, 'Traslados': 0, 'Servicio Interno': 0, 'Subrogado': 0},
@@ -36,7 +37,7 @@ class _EstadisticaScreenState extends State<EstadisticaScreen> {
   @override
   void initState() {
     super.initState();
-    userDataFuture = fetchUserData(widget.personaId);
+    
     fetchChartData();
     fetchRoleData();
   }
@@ -132,15 +133,20 @@ Widget build(BuildContext context) {
       ),
     ),
 
-    drawer: Drawer(
-      child: CustomDrawer(
-        userDataFuture: userDataFuture,
+      drawer: CustomDrawer3(
+        user: widget.user,
         area: widget.area,
-        personaId: widget.personaId,
-        logout: _logout,
+        logout: () async {
+          await FacebookSignInApi.logout();
+          Navigator.of(context).pushReplacement(
+            MaterialPageRoute(builder: (context) => const LoginScreen()),
+          );
+        },
       ),
-    ),
-    
+
+
+
+
     body: SingleChildScrollView( // Agregar SingleChildScrollView para permitir el desplazamiento
       child: Center(
         child: Column(

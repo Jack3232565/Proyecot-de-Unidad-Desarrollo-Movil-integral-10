@@ -1,24 +1,25 @@
-import 'package:direccion_general_flutter/View/aprobacionesSM2.dart';
-import 'package:direccion_general_flutter/View/bitacora_screen2.dart';
-import 'package:direccion_general_flutter/View/estadisticas2.dart';
-import 'package:direccion_general_flutter/View/home_screen2.dart';
-import 'package:direccion_general_flutter/View/nosotros_screen2.dart';
-import 'package:direccion_general_flutter/View/terminosCondiciones2.dart';
+import 'package:direccion_general_flutter/View/aprobacionesSM3.dart';
+import 'package:direccion_general_flutter/View/bitacora_screen3.dart';
+import 'package:direccion_general_flutter/View/estadisticas3.dart';
+import 'package:direccion_general_flutter/View/home_screen3.dart';
+import 'package:direccion_general_flutter/View/nosotros_screen3.dart';
+import 'package:direccion_general_flutter/View/terminosCondiciones3.dart';
+import 'package:direccion_general_flutter/oauth/facebook.dart' as fb;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:google_sign_in/google_sign_in.dart';
 
-class CustomDrawer2 extends StatelessWidget {
+class CustomDrawer3 extends StatelessWidget {
+  final fb.FacebookUser user; // Cambiado a FacebookUser
   final String area;
-  final GoogleSignInAccount user;
-  final Function logout;
 
-  const CustomDrawer2({
-    super.key,
+  final Future<void> Function() logout;
+
+  const CustomDrawer3({
+    Key? key,
     required this.area,
     required this.user,
     required this.logout,
-  });
+  }): super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -50,14 +51,14 @@ class CustomDrawer2 extends StatelessWidget {
                       // Imagen de perfil del usuario
                       ClipRRect(
                               borderRadius: BorderRadius.circular(15.0),
-                              child: user.photoUrl != null
-                                  ? Image.network(user.photoUrl!, height: 50, width: 50, fit: BoxFit.cover)
+                              child: user.pictureUrl != null
+                                  ? Image.network(user.pictureUrl!, height: 50, width: 50, fit: BoxFit.cover)
                                   : Image.asset('assets/default_avatar.png', height: 50),
                             ),
                       const SizedBox(height: 10),
                       // Nombre del usuario
                       Text(
-                        'Bienvenid@: ${user.displayName ?? 'Usuario'}',
+                        'Bienvenid@: ${user.name}',
                           style: GoogleFonts.comicNeue(fontSize: 10, fontWeight: FontWeight.bold),
                         textAlign: TextAlign.center,
                       ),
@@ -86,11 +87,12 @@ class CustomDrawer2 extends StatelessWidget {
                           Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => HomeScreen2(area: area, user: user),
+                              builder: (context) => HomeScreen3(area: area, user: user),
                             ),
                           );
                         },
                       ),
+
 
                         ListTile(
                             leading: SizedBox(
@@ -104,7 +106,7 @@ class CustomDrawer2 extends StatelessWidget {
                               Navigator.pushReplacement(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => AprobacionesScreen2(
+                                  builder: (context) => AprobacionesScreen3(
                                     area: area,
                                     user: user
                                   ),
@@ -114,23 +116,23 @@ class CustomDrawer2 extends StatelessWidget {
                           ),
 
 
-                      ListTile(
-                        leading: SizedBox(
-                          width: 25, // Ajusta el ancho
-                          height: 25, // Ajusta la altura
-                          child: Image.asset('assets/Estadisitica.png'), // Ícono personalizado
-                        ),
-                        title: Text('Estadistica', style: GoogleFonts.comicNeue(fontSize: 16)),
-                        onTap: () {
-                                Navigator.pop(context);
-                                Navigator.pushReplacement(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => EstadisticaScreen2(area: area, user: user),
-                                  ),
-                                );
-                              },
-                            ),
+                        ListTile(
+                          leading: SizedBox(
+                            width: 25, // Ajusta el ancho
+                            height: 25, // Ajusta la altura
+                            child: Image.asset('assets/Estadisitica.png'), // Ícono personalizado
+                          ),
+                          title: Text('Estadistica', style: GoogleFonts.comicNeue(fontSize: 16)),
+                          onTap: () {
+                                  Navigator.pop(context);
+                                  Navigator.pushReplacement(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => EstadisticaScreen3(area: area, user: user),
+                                    ),
+                                  );
+                                },
+                              ),
 
 
                         ListTile(
@@ -147,7 +149,7 @@ class CustomDrawer2 extends StatelessWidget {
                                   Navigator.pushReplacement(
                                     context,
                                     MaterialPageRoute(
-                                      builder: (context) => BitacoraScreen2(area: area, user: user),
+                                      builder: (context) => BitacoraScreen3(area: area, user: user),
                                     ),
                                   );
                           },
@@ -162,15 +164,13 @@ class CustomDrawer2 extends StatelessWidget {
                                     Navigator.pushReplacement(
                                       context,
                                       MaterialPageRoute(
-                                        builder: (context) => NosotrosScreen2(area: area, user: user),
+                                        builder: (context) => NosotrosScreen3(area: area, user: user),
                                       ),
                                     );
                             },
                           ),
 
-
-
-                          ListTile(
+                                                    ListTile(
                             leading: const Icon(Icons.privacy_tip),
                             title: Text('Términos y Condiciones', style: GoogleFonts.comicNeue(fontSize: 16)),
                             onTap: () {
@@ -178,7 +178,7 @@ class CustomDrawer2 extends StatelessWidget {
                                     Navigator.pushReplacement(
                                       context,
                                       MaterialPageRoute(
-                                        builder: (context) => TerminosScreen2(area: area, user: user),
+                                        builder: (context) => TerminosScreen3(area: area, user: user),
                                       ),
                                     );
                             },
