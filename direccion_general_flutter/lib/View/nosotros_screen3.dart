@@ -72,7 +72,7 @@ class _NosotrosScreen3State extends State<NosotrosScreen3> {
             const SizedBox(width: 18),
             Flexible(
               child: Text(
-                'Términos y Condiciones',
+                'Nosotros',
                 style: GoogleFonts.comicNeue(fontSize: 15),
                 overflow: TextOverflow.ellipsis,
                 softWrap: false,
