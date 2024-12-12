@@ -11,6 +11,11 @@ En este repositorio se documentara todos los avaces del proyecto de unidad de la
 
  ![Organigrama](img/Organigrama%20del%20Equipo.png)
 
+ ## URL de la APK de Direccion General - Privilege Care
+ 
+ |**![DescripcionyCodigo](img/logo_privilege.png)** |https://drive.google.com/file/d/1lOL5t2ljZ8R84v3_kOiq9MYRUn-qmMwN/view?usp=drive_link|
+ | - | - |
+
 
 ## Estrucutura de Desarrollo del Proyecto: 
 
@@ -257,7 +262,7 @@ https://www.figma.com/design/0t2dq3pWZYl7BOSUw25aC8/Dise%C3%B1o-Propuesto-Direcc
 
 | **Emulación** | **Enlace o Previo** |
 | - | - |
-| **Enlace al emulador** | [Ver Emulación Previa](https://appetize.io/embed/b_62fyvngi67iamfjpgjp7uaojgi) |
+| **Enlace al emulador** | [Ver Emulación Previa](https://appetize.io/app/b_eqagxuxnykevtjusoea6wdde6q) |
 | **Vista previa** | [![Vista Previa](img/Pantalla.png)](https://www.youtube.com/shorts/HFt6zeJAAu4) |
 
 
