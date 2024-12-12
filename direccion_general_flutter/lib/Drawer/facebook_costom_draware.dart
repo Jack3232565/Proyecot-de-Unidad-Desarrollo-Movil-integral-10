@@ -14,6 +14,7 @@ class CustomDrawer3 extends StatelessWidget {
 
   final Future<void> Function() logout;
 
+  // ignore: use_super_parameters
   const CustomDrawer3({
     Key? key,
     required this.area,
@@ -51,6 +52,7 @@ class CustomDrawer3 extends StatelessWidget {
                       // Imagen de perfil del usuario
                       ClipRRect(
                               borderRadius: BorderRadius.circular(15.0),
+                              // ignore: unnecessary_null_comparison
                               child: user.pictureUrl != null
                                   ? Image.network(user.pictureUrl!, height: 50, width: 50, fit: BoxFit.cover)
                                   : Image.asset('assets/default_avatar.png', height: 50),
