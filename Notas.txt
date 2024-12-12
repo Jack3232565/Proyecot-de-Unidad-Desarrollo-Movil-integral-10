@@ -73,3 +73,6 @@ Valid until: domingo, 7 de abril de 2052
 dentro de la consola de Google Cloud 
 
 https://console.cloud.google.com/apis/credentials/consent?hl=es&project=hospital-oauth
+
+
+
