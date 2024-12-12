@@ -248,6 +248,7 @@ Future<void> fetchSolicitudes() async {
           ],
         ),
       ),
+
       drawer: Drawer(
         child:CustomDrawer( // Se agrega el widget CustomDrawer que es el menu lateral desde el archivo costom_drawer.dart
           userDataFuture: userDataFuture,
@@ -256,6 +257,7 @@ Future<void> fetchSolicitudes() async {
           logout: _logout
         ),
       ),
+      
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,

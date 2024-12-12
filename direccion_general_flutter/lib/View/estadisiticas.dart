@@ -1,5 +1,6 @@
 import 'package:direccion_general_flutter/Drawer/costom_drawer.dart';
 import 'package:direccion_general_flutter/View/Grafics/GrafiAprobaciones.dart';
+import 'package:direccion_general_flutter/View/home_screen.dart' as home; // Import the HomeScreen class with alias
 import 'package:direccion_general_flutter/login_screean.dart';
 import 'package:flutter/material.dart';
 import 'dart:convert';
@@ -36,7 +37,7 @@ class _EstadisticaScreenState extends State<EstadisticaScreen> {
   @override
   void initState() {
     super.initState();
-    userDataFuture = fetchUserData(widget.personaId);
+    userDataFuture = home.fetchUserData(widget.personaId);
     fetchChartData();
     fetchRoleData();
   }

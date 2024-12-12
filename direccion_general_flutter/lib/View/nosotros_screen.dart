@@ -2,7 +2,9 @@ import 'package:direccion_general_flutter/Drawer/costom_drawer.dart';
 import 'package:direccion_general_flutter/View/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:direccion_general_flutter/Drawer/costom_drawer.dart' as drawer;
+import 'package:direccion_general_flutter/View/home_screen.dart' as home; // Import the HomeScreen class with alias
+
+
 
 class NosotrosScreen extends StatefulWidget {
   final String area;
@@ -20,7 +22,7 @@ class _NosotrosScreenState extends State<NosotrosScreen> {
   @override
   void initState() {
     super.initState();
-    userDataFuture = drawer.fetchUserData(widget.personaId);
+    userDataFuture = home.fetchUserData(widget.personaId);
   }
 
   void _logout(BuildContext context) {

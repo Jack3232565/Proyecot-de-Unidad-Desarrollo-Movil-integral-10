@@ -269,11 +269,17 @@ Future<Map<String, dynamic>> fetchUserData(int personaId) async {
       final List<dynamic> usuarios = jsonDecode(usuarioResponse.body);
       final List<dynamic> personas = jsonDecode(personaResponse.body);
 
-      final userData = usuarios.firstWhere((user) => user['ID'] == personaId, orElse: () => null);
-      final personaData = personas.firstWhere((persona) => persona['id'] == personaId, orElse: () => null);
+      final userData = usuarios.firstWhere(
+        (user) => user['Persona_ID'] == personaId, // Cambio aquí
+        orElse: () => null,
+      );
+      final personaData = personas.firstWhere(
+        (persona) => persona['id'] == personaId,
+        orElse: () => null,
+      );
 
       if (userData == null) {
-        throw Exception("User with ID $personaId not found");
+        throw Exception("User with Persona_ID $personaId not found");
       }
       if (personaData == null) {
         throw Exception("Persona with ID $personaId not found");
@@ -287,8 +293,8 @@ Future<Map<String, dynamic>> fetchUserData(int personaId) async {
 
     throw Exception("Failed to load user data");
   } catch (e) {
-    // Manejo de excepciones
     print("Error fetching user data: $e");
     throw Exception("Error fetching user data");
   }
 }
+

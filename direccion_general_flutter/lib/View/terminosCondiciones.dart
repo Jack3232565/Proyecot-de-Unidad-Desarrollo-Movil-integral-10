@@ -2,7 +2,7 @@ import 'package:direccion_general_flutter/Drawer/costom_drawer.dart';
 import 'package:direccion_general_flutter/View/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:direccion_general_flutter/Drawer/costom_drawer.dart' as drawer;
+import 'package:direccion_general_flutter/View/home_screen.dart' as home; // Import the HomeScreen class with alias
 
 class TerminosScreen extends StatefulWidget {
   final String area;
@@ -20,7 +20,7 @@ class _TerminosScreenState extends State<TerminosScreen> {
   @override
   void initState() {
     super.initState();
-    userDataFuture = drawer.fetchUserData(widget.personaId);
+    userDataFuture = home.fetchUserData(widget.personaId);
   }
 
   void _logout(BuildContext context) {
@@ -54,6 +54,7 @@ class _TerminosScreenState extends State<TerminosScreen> {
           ],
         ),
       ),
+
       drawer: Drawer(
         child: CustomDrawer(
           userDataFuture: userDataFuture,
@@ -62,6 +63,7 @@ class _TerminosScreenState extends State<TerminosScreen> {
           logout: _logout,
         ),
       ),
+      
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(16.0),
