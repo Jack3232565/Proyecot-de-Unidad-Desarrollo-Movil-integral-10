@@ -21,6 +21,11 @@ En este repositorio se documentara todos los avaces del proyecto de unidad de la
 
  ![alt text](img/Metodologia%20Scrum%20del%20Proyecto%20DH-Hospitalaria.png)
 
+
+## Presentación del Proyecto: 
+
+**![Doc](img/presentacion.png)** <br> [Presentacion del Proyecto](Documents/Presentación%20Proyecto%20Final%20DG-Hopitalaria%20Apliacion%20Movil%20-%20Direccion%20General.pdf) 
+
 ## Objetivo General
 
 <div style="text-align: justify">
