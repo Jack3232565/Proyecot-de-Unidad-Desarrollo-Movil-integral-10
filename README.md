@@ -19,7 +19,7 @@ En este repositorio se documentara todos los avaces del proyecto de unidad de la
 
 ## Estrucutura de Desarrollo del Proyecto: 
 
- ![alt text](img/Estrucutura%20de%20Etapas%20para%20el%20desarrollo%20del%20Proyecto%20de%20Direccion%20General.png)
+ ![alt text](img/Metodologia%20Scrum%20del%20Proyecto%20DH-Hospitalaria.png)
 
 ## Objetivo General
 
